@@ -74,6 +74,11 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 ---
 
+#-introduction#-introduction
+
+
+
+
 ## 🛠️ Setup Instructions
 
 1. Clone the repo and OpenLANE environment:
