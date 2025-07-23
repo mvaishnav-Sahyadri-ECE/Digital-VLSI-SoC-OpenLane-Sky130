@@ -163,7 +163,7 @@ The flow performs all ASIC implementation steps from RTL down to GDSII. OpenLane
 
 - *Antenna Rules Violation* : long wire segments will act as antennna and will accumulate charges, this might damage the connected transistor gates. Solution is to either use bridging or antenna diode insertion to leak away the charges.
   
-- image of design picorv32.
+image of design picorv32.
 
 Inside a specific design folder contains a config.tcl which overrides the default settings on OpenLANE. 
 These configurations are specific to a design (e.g. clock period, clock port, verilog files...). 
