@@ -72,7 +72,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 ---
 
-#Inception of Open source EDA,OpenLane and Sky130 PDK
+# Inception of Open source EDA,OpenLane and Sky130 PDK
 
 we explore the fundamental physical elements of an integrated circuit (IC) : 
 
