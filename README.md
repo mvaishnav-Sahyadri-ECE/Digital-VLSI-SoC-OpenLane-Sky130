@@ -12,7 +12,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 - [Introduction](#introduction)
 - [Overall Design Flow](#overall-design-flow)
-- [DAY 1](#DAY-1:Inception-of-Open-source-EDA,OpenLane-and-Sky130-PDK)
+- [DAY 1](#DAY-1)
   - [Synthesis](#synthesis)
     - [Synthesis Strategies](#11-synthesis-strategies)
     - [Design Exploration Utility](#12-deign-exploration-utility)
@@ -72,7 +72,8 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 ---
 
-# DAY-1:Inception-of-Open-source-EDA,OpenLane-and-Sky130-PDK
+# DAY-1
+## Inception-of-Open-source-EDA,OpenLane-and-Sky130-PDK
 
 we explore the fundamental physical elements of an integrated circuit (IC) : 
 
