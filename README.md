@@ -10,12 +10,10 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 ## 📁 Repository Structure
 
-## 🔗 Table of Contents
-
 - [Introduction](#introduction)
 - [Overall Design Flow](#overall-design-flow)
-- [OpenLANE Flow](#openlane-flow)
-  - [Synthesis](#1-synthesis)
+- [Day 1](#Inception-of-Open-source-EDA,OpenLane-and-Sky130-PDK)
+  - [Synthesis](#synthesis)
     - [Synthesis Strategies](#11-synthesis-strategies)
     - [Design Exploration Utility](#12-deign-exploration-utility)
     - [Design For Test - DFT Insertion](#13-design-for-test---dft-insertion)
@@ -74,190 +72,24 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 ---
 
-# introduction
+#Inception of Open source EDA,OpenLane and Sky130 PDK
 
+we explore the fundamental physical elements of an integrated circuit (IC) : 
 
+**Package, Chip, Pads, Core, Die, and IPs** : 
+- The QFN-48 (Quad Flat No-lead) package is a surface-mounted IC package with 48 pins used to connect the chip to the outside world.
 
+- Inside the package is the die, the actual silicon chip where transistors are fabricated.
 
-## 🛠️ Setup Instructions
+- The core is the functional part of the die where the logic (e.g., processor, memory) is implemented.
 
-1. Clone the repo and OpenLANE environment:
+- Surrounding the core are pads, which act as electrical contact points for interfacing signals from the core to the pins on the package.
+  
+- The chip as a whole includes the die, package, and connections.
 
-```bash
-git clone https://github.com/vaishnav-openlane/PicoRV32-Sky130.git
-cd PicoRV32-Sky130
-```
+The core of the chip will contain two types of blocks:
 
-2. Install OpenLANE (refer: [https://github.com/The-OpenROAD-Project/OpenLane](https://github.com/The-OpenROAD-Project/OpenLane))
-3. Launch the OpenLANE interactive shell:
+**Foundry IP Blocks** (e.g. ADC, DAC, PLL, and SRAM) = blocks which requires some amount of intelligent techniques to build which can only be designed by foundries.
+**Macro blocks** (e.g. RISC-V SOC and SPI) = pure digital logic blocks compared to IP's which might require some analog parts.
 
-```bash
-cd openlane
-make mount
-```
-
-4. Run synthesis and flow:
-
-```tcl
-run_synthesis
-run_floorplan
-run_placement
-run_cts
-run_routing
-run_drc
-run_lvs
-run_antenna_check
-```
-
----
-
-## 📷 Screenshots
-
-| Step | Description         | Screenshot             |
-| ---- | ------------------- | ---------------------- |
-| D1   | Initial Synthesis   | ![d1](images/day1.png) |
-| D2   | Placement & Routing | ![d2](images/day2.png) |
-
-(Feel free to update screenshots later.)
-
----
-
-## 📌 TODO / Future Work
-
-* [ ] Integrate power grid analysis
-* [ ] Perform IR drop estimation
-* [ ] Tapeout readiness checks
-
----
-
-## 📄 License
-
-This project is released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
----
-
-## 🙏 Acknowledgments
-
-* VSD Corp for conducting the workshop
-* OpenROAD, Skywater, and Efabless communities
-* Inspiration: [shariethernet's repo](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK)
-
----
-
-## 👤 Author
-
-**M Vaishnav**
-Final Year B.E., Electronics and Communication Engineering
-# PicoRV32 SoC Physical Design using OpenLANE & Sky130 PDK
-
-## 📘 Project Introduction
-
-This repository presents a hands-on implementation of the **PicoRV32a SoC**, fully synthesized and laid out using the **automated OpenLANE RTL-to-GDSII flow** and the **Skywater 130 nm PDK**. Completed within the *VSD “Advanced Physical Design using OpenLANE/Sky130”* workshop, this project demonstrates a complete backend chip-design journey—from Verilog code to tape-out-ready layout.
-
-**OpenLANE** is a fully open-source EDA toolchain (Apache‑2.0) that orchestrates a series of tools—**Yosys**, **OpenROAD**, **Magic**, **Netgen**, **Fault**, **OpenPhySyn**, **SPEF-Extractor**, and custom scripts—to generate clean, manufacturable GDSII layouts with minimal manual intervention.
-
-### 🚀 Key Highlights:
-
-* Integrated **custom-designed standard cell libraries** with Sky130 PDK.
-* Resolved **setup and hold slack violations** via timing optimization.
-* Performed **DRC, LVS, and antenna rule checks**.
-* Demonstrated **fully automated RTL-to-GDSII flow** with OpenLANE.
-
----
-
-## 📁 Repository Structure
-
-```
-├── src/                    # RTL and Verilog files
-├── openlane/              # OpenLANE run configurations
-│   └── picorv32a/
-├── macros/                # Custom standard cell library files
-├── results/               # Final GDS, DEF, netlist, reports
-│   ├── gds/
-│   ├── def/
-│   └── logs/
-├── images/                # Screenshots of layout, waveforms, etc.
-├── scripts/               # Helper and automation scripts
-└── README.md              # This file
-```
-
----
-
-## ⚙️ Tools & Environment
-
-* **PDK:** Skywater130 open-source
-* **OpenLANE version:** v2023.02 or newer
-* **Design:** PicoRV32a (small RISC-V core)
-* **Platform:** Ubuntu 20.04 (recommended)
-
----
-
-## 🛠️ Setup Instructions
-
-1. Clone the repo and OpenLANE environment:
-
-```bash
-git clone https://github.com/vaishnav-openlane/PicoRV32-Sky130.git
-cd PicoRV32-Sky130
-```
-
-2. Install OpenLANE (refer: [https://github.com/The-OpenROAD-Project/OpenLane](https://github.com/The-OpenROAD-Project/OpenLane))
-3. Launch the OpenLANE interactive shell:
-
-```bash
-cd openlane
-make mount
-```
-
-4. Run synthesis and flow:
-
-```tcl
-run_synthesis
-run_floorplan
-run_placement
-run_cts
-run_routing
-run_drc
-run_lvs
-run_antenna_check
-```
-
----
-
-## 📷 Screenshots
-
-| Step | Description         | Screenshot             |
-| ---- | ------------------- | ---------------------- |
-| D1   | Initial Synthesis   | ![d1](images/day1.png) |
-| D2   | Placement & Routing | ![d2](images/day2.png) |
-
-(Feel free to update screenshots later.)
-
----
-
-## 📌 TODO / Future Work
-
-* [ ] Integrate power grid analysis
-* [ ] Perform IR drop estimation
-* [ ] Tapeout readiness checks
-
----
-
-## 📄 License
-
-This project is released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
----
-
-## 🙏 Acknowledgments
-
-* VSD Corp for conducting the workshop
-* OpenROAD, Skywater, and Efabless communities
-* Inspiration: [shariethernet's repo](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK)
-
----
-
-## 👤 Author
-
-**M Vaishnav**
-Final Year B.E., Electronics and Communication Engineering
+<img width="1457" height="853" alt="182751377-2810d388-21b0-4df1-b1d4-c72176d80d28" src="https://github.com/user-attachments/assets/d6c9f443-dc08-4587-972a-c46c9b927dad" />
