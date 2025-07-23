@@ -1,4 +1,4 @@
-# Digital-VLSI-SoC-OpenLane-Sky130
+ # Digital-VLSI-SoC-OpenLane-Sky130
 
 ## 📘 Project Introduction
 This repository showcases the complete physical design flow using the OpenLANE toolchain with the Sky130 open-source PDK. Executed as part of Digital VLSI SoC Design and Planning Workshop by VLSI System Design Corporation, the project offers a hands-on experience in chip design, starting from RTL to the final GDSII.
@@ -72,7 +72,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 ---
 
-# Inception of Open source EDA,OpenLane and Sky130 PDK
+# Inception=of-Open-source-EDA,OpenLane-and-Sky130-PDK
 
 we explore the fundamental physical elements of an integrated circuit (IC) : 
 
