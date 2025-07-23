@@ -12,7 +12,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 ## 🔗 Table of Contents
 
-- [Introduction](#-introduction)
+- [Introduction](#introduction)
 - [Overall Design Flow](#overall-design-flow)
 - [OpenLANE Flow](#openlane-flow)
   - [Synthesis](#1-synthesis)
