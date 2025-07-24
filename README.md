@@ -180,6 +180,6 @@ The priority order for the OpenLANE settings:
 
 -*running OpenLANE :*
 
-  -Type docker to Invoke openLane tool (inside ```bash             openlane/```bash . For eg : ```bash                             /Desktop/work/tools/openlane_working_dir/openlane ```bash )
+  -Type docker to Invoke openLane tool (inside ```                 openlane/```. for eg : ```                                      /Desktop/work/tools/openlane_working_dir/openlane ``` )
   
 
