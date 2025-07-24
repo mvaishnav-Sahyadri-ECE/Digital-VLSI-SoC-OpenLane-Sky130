@@ -186,4 +186,4 @@ The priority order for the OpenLANE settings:
 
   - ```package require openlane 0.9```
  
-  <img width="723" height="491" alt="Screenshot 2025-07-24 120932" src="https://github.com/user-attachments/assets/42c4e8a2-9a39-4ac9-9a62-2be252e3fb0f" />
+  <img width="723" height="250" alt="Screenshot 2025-07-24 120932" src="https://github.com/user-attachments/assets/42c4e8a2-9a39-4ac9-9a62-2be252e3fb0f" />
