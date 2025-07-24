@@ -184,8 +184,9 @@ The priority order for the OpenLANE settings:
   After running synthesis, inside the ```runs/[date]/results/synthesis``` is ```picorv32a_synthesis.v``` which is the mapping of the netlist to      standard cell    library using ABC. The                          ```runs/[date]/reports/synthesis``` will contain synthesis statistic reports and static timing analysis    reports.
 
   ```Results  and Reports : ```
+  
   <img width="848" height="107" alt="Screenshot 2025-07-24 132349" src="https://github.com/user-attachments/assets/a0e2bb41-4784-4395-8c2a-7c3d3f53156a" />
-  <img width="1775" height="130" alt="Screenshot 2025-07-24 133023" src="https://github.com/user-attachments/assets/78de66bd-0091-43ba-9f40-47aad4db611c" />
+  <img width="848" height="130" alt="Screenshot 2025-07-24 133023" src="https://github.com/user-attachments/assets/78de66bd-0091-43ba-9f40-47aad4db611c" />
 
 
 #### Estimation of Flip Flop Ratio 
