@@ -1,4 +1,4 @@
- # Digital-VLSI-SoC-OpenLane-Sky130
+<img width="1355" height="545" alt="Screenshot 2025-07-24 134259" src="https://github.com/user-attachments/assets/1a665742-3379-4f6e-bebc-0cf7de8ef3d4" /> # Digital-VLSI-SoC-OpenLane-Sky130
 
 ## 📘 Project Introduction
 This repository showcases the complete physical design flow using the OpenLANE toolchain with the Sky130 open-source PDK. Executed as part of Digital VLSI SoC Design and Planning Workshop by VLSI System Design Corporation, the project offers a hands-on experience in chip design, starting from RTL to the final GDSII.
@@ -310,7 +310,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
 #### FloorPlan
 
-- Run Floorplan - ```run floor_plan```
+- Run Floorplan : ```run floor_plan```
 
 - To view our floorplan in Magic we need :
 
@@ -322,9 +322,10 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
   ```cd /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/<date>/results/floorplan```
 
-- To invoke magic use the command :
+  To invoke magic use the command :
 
   ```magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &```
+  
   <img width="1842" height="37" alt="Screenshot 2025-07-24 134349" src="https://github.com/user-attachments/assets/40cb2aba-9fc6-43e8-a196-1216bfb0aa48" />
 
   *Result* : 
@@ -339,7 +340,26 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   <img width="1426" height="668" alt="Screenshot 2025-07-24 133654" src="https://github.com/user-attachments/assets/770e1f71-f57d-44e4-b710-31d5bbab4fac" />
   To get information about the selected object press ```s``` and type ```what``` in console - same as in the above image
 
+#### PlaceMent 
+
+- To do a placement in OpenLane : ```run_placement```
+
+- Viewing Placement in Magic :
+
+  ```magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &```
+
+  <img width="1840" height="42" alt="Screenshot 2025-07-24 134409" src="https://github.com/user-attachments/assets/35373e18-0d02-4666-9629-b5e8f4adcdc3" />
+
+  *results* :
+
+  <img width="1442" height="728" alt="Screenshot 2025-07-24 134153" src="https://github.com/user-attachments/assets/10d3ff16-2da9-4f14-a763-c834a3e04b00" />
+
+  <img width="1355" height="545" alt="Screenshot 2025-07-24 134259" src="https://github.com/user-attachments/assets/dc7bd71a-8625-4cd5-abad-92c53610c52d" />
+  If we zoom, we the core with all the standard cells placed in between power can ground rail
+
+
   
+
 
 
 
