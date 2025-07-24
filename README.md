@@ -334,9 +334,11 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   To center the view, press "s" to select whole die then press "v" to center the view. Point the cursor to a cell then press "s" to select it, zoom into it by pressing 'z". Type "what" in tkcon to display          information of selected object. These objects might be IO pin, decap cell, or well taps as shown below.
 
   <img width="848" height="907" alt="Screenshot 2025-07-24 133602" src="https://github.com/user-attachments/assets/c546ebab-bfb0-4631-9967-62575694aa4a" />
+  
   if we zoom, we can see that some of the micro, IO pad, and tap-cells have been placed appropriately.
 
   <img width="848" height="668" alt="Screenshot 2025-07-24 133654" src="https://github.com/user-attachments/assets/770e1f71-f57d-44e4-b710-31d5bbab4fac" />
+  
   To get information about the selected object press ```s``` and type ```what``` in console - same as in the above image
 
 #### PlaceMent 
