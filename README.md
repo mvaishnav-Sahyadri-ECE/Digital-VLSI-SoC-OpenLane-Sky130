@@ -22,7 +22,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
   - [Theory](#DAY-2)
     - [Floorplan](#Floorplan)
     - [Placement](#Placement)
-  - [Lab 2](#Lab-2)
+  - [Lab](#Lab-2)
     - [Floorplan](#FloorPlan)
     - [Placement](#PlaceMent)
     - [Characterization](#Library-Characterization)
