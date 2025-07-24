@@ -23,8 +23,8 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Floorplan](#Floorplan)
     - [Placement](#Placement)
   - [Lab](#Lab-2)
-    - [Floorplan](#FloorPlan)
-    - [Placement](#PlaceMent)
+    - [Floorplan](#Floor-Plan)
+    - [Placement](#Place-Ment)
     - [Characterization](#Library-Characterization)
     - [Estimation of area of the die](#Estimation-of-area-of-the-die)
 - [Synthesis](#synthesis)
@@ -312,7 +312,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
 ## Lab 2 
 
-#### FloorPlan
+#### Floor Plan
 
 - Run Floorplan : ```run floor_plan```
 
@@ -346,7 +346,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   
   To get information about the selected object press ```s``` and type ```what``` in console - same as in the above image
 
-#### PlaceMent 
+#### Place Ment 
 
 - To do a placement in OpenLane : ```run_placement```
 
