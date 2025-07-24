@@ -325,18 +325,18 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
   ```magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &```
   
-  <img width="1842" height="37" alt="Screenshot 2025-07-24 134349" src="https://github.com/user-attachments/assets/40cb2aba-9fc6-43e8-a196-1216bfb0aa48" />
+  <img width="848" height="37" alt="Screenshot 2025-07-24 134349" src="https://github.com/user-attachments/assets/40cb2aba-9fc6-43e8-a196-1216bfb0aa48" />
 
   *Result* : 
 
-  <img width="1442" height="732" alt="Screenshot 2025-07-24 133352" src="https://github.com/user-attachments/assets/b7d0b4e7-4386-4b35-90fe-e37f92b2afa1" />
+  <img width="848" height="732" alt="Screenshot 2025-07-24 133352" src="https://github.com/user-attachments/assets/b7d0b4e7-4386-4b35-90fe-e37f92b2afa1" />
 
   To center the view, press "s" to select whole die then press "v" to center the view. Point the cursor to a cell then press "s" to select it, zoom into it by pressing 'z". Type "what" in tkcon to display          information of selected object. These objects might be IO pin, decap cell, or well taps as shown below.
 
-  <img width="1853" height="907" alt="Screenshot 2025-07-24 133602" src="https://github.com/user-attachments/assets/c546ebab-bfb0-4631-9967-62575694aa4a" />
+  <img width="848" height="907" alt="Screenshot 2025-07-24 133602" src="https://github.com/user-attachments/assets/c546ebab-bfb0-4631-9967-62575694aa4a" />
   if we zoom, we can see that some of the micro, IO pad, and tap-cells have been placed appropriately.
 
-  <img width="1426" height="668" alt="Screenshot 2025-07-24 133654" src="https://github.com/user-attachments/assets/770e1f71-f57d-44e4-b710-31d5bbab4fac" />
+  <img width="848" height="668" alt="Screenshot 2025-07-24 133654" src="https://github.com/user-attachments/assets/770e1f71-f57d-44e4-b710-31d5bbab4fac" />
   To get information about the selected object press ```s``` and type ```what``` in console - same as in the above image
 
 #### PlaceMent 
@@ -347,17 +347,81 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
   ```magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &```
 
-  <img width="1840" height="42" alt="Screenshot 2025-07-24 134409" src="https://github.com/user-attachments/assets/35373e18-0d02-4666-9629-b5e8f4adcdc3" />
+  <img width="848" height="42" alt="Screenshot 2025-07-24 134409" src="https://github.com/user-attachments/assets/35373e18-0d02-4666-9629-b5e8f4adcdc3" />
 
   *results* :
 
-  <img width="1442" height="728" alt="Screenshot 2025-07-24 134153" src="https://github.com/user-attachments/assets/10d3ff16-2da9-4f14-a763-c834a3e04b00" />
+  <img width="848" height="728" alt="Screenshot 2025-07-24 134153" src="https://github.com/user-attachments/assets/10d3ff16-2da9-4f14-a763-c834a3e04b00" />
 
-  <img width="1355" height="545" alt="Screenshot 2025-07-24 134259" src="https://github.com/user-attachments/assets/dc7bd71a-8625-4cd5-abad-92c53610c52d" />
+  <img width="848" height="545" alt="Screenshot 2025-07-24 134259" src="https://github.com/user-attachments/assets/dc7bd71a-8625-4cd5-abad-92c53610c52d" />
   If we zoom, we the core with all the standard cells placed in between power can ground rail
 
 
+#### Library Characterization
+
+- Purpose:
   
+  - Provides standard cells, macros, decaps for EDA tools.
+
+  - Cells come in different sizes, Vth, drive strengths.
+
+- Inputs (From Foundry PDK):
+  
+  ✔ DRC/LVS rules (manufacturability)
+  ✔ SPICE models (transistor behavior)
+  ✔ User specs (cell height, width, VDD, metal layers)
+
+- Cell Design Flow
+  
+  - Circuit Design → CDL netlist.
+
+  - Transistor Sizing → Meet speed/power needs.
+
+  - Layout → Stick diagram + Euler’s path (Magic tool).
+
+  - Outputs:
+
+    GDSII (layout)
+
+    LEF (dimensions, pins)
+
+    Extracted SPICE (parasitics)
+
+- Characterization (GUNA Tool):
+  
+  - Timing:
+
+    Slew (20%-80% rise/fall time).
+
+    Prop Delay (50% input → 50% output).
+
+    Power (leakage, dynamic).
+
+    Noise (crosstalk).
+
+- Key Notes:
+  
+    ⚠ Negative delay? → Fix threshold (use 50%).
+   📌 Bigger cells = stronger drive but slower (higher Vth).
+
+  
+<img width="848" height="603" alt="dadda" src="https://github.com/user-attachments/assets/a288d9cd-e1cc-4df1-bdf8-d5c77d97a7c4" />
+
+#### Estimation off area of the die 
+
+- In runs/<date>/results/floorplan/picorv32a.floorplan.def which is a design exchange format, containing the die area and positions.
+
+```
+DESIGN picorv32a ;
+UNITS DISTANCE MICRONS 1000 ;
+DIEAREA ( 0 0 ) ( 660685 671405 ) ;
+```
+
+<img width="848" height="592" alt="Screenshot 2025-07-24 132311" src="https://github.com/user-attachments/assets/2cdf5fe9-7670-4eb5-a1dd-8c9a8d98e253" />
+
+The die area here is in database units and 1 micron is equivalent to 1000 database units. Thus area of the die is (660685/1000)microns*(671405/1000)microns = 443587 microns squared.
+
+
 
 
 
