@@ -16,6 +16,11 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Simplified RTL to GDSII Flow](#Simplified-RTL-to-GDSII-Flow)
     - [OpenLane Flow](#OpenLane-Flow)
   - [Lab](#Lab)
+    - Running OpenLANE
+    - Design Setup Stage
+    - Running synthesis
+    - Estimation of Flip Flop Ratio
+    - Slack 
 - [DAY 2](#openlane-installation-and-environment-setup)
 - [OpenLane Directory Structure](#openlane-directory-structure)
 - [Working with OpenLane](#working-with-openlane)
@@ -159,7 +164,7 @@ The priority order for the OpenLANE settings:
 
 ## Lab 
 
-- *running OpenLANE :*
+- *Running OpenLANE :*
 
   - Type docker to Invoke openLane tool (inside``` openlane/```)(```/Desktop/work/tools/openlane_working_dir/openlane```)
 
@@ -180,7 +185,7 @@ The priority order for the OpenLANE settings:
   
   After running synthesis, inside the ```runs/[date]/results/synthesis``` is ```picorv32a_synthesis.v``` which is the mapping of the netlist to      standard cell    library using ABC. The ```runs/[date]/reports/synthesis``` will contain synthesis statistic reports and static timing analysis    reports.
 
-**Estimation Flip Flop Ratio :**
+**Estimation of Flip Flop Ratio :**
 
 <img width="848" height="600" alt="Screenshot 2025-07-24 123628" src="https://github.com/user-attachments/assets/30b7898a-9a64-4365-9e04-f5027549eead" />
 
