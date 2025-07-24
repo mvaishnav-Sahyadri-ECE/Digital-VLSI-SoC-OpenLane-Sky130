@@ -15,15 +15,11 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Introduction to RISC-V](#Introduction-to-RISC-V)
     - [Simplified RTL to GDSII Flow](#Simplified-RTL-to-GDSII-Flow)
     - [OpenLane Flow](#OpenLane-Flow)
-  - [Lab](#Lab)
-    - [Running OpenLANE]
-    - [Design Setup Stage]
-    - [Running synthesis]
-    - [Estimation of Flip Flop Ratio]
-    - [Slack]
+  - [Lab](#Lab-1)
+    - [Synthesis](#Lab-1)
+    - [Estimation of Flip Flop Ratio](#Estimation-of-Flip-Flop-Ratio)
+    - [Slack](#Slack)
 - [DAY 2](#openlane-installation-and-environment-setup)
-- [OpenLane Directory Structure](#openlane-directory-structure)
-- [Working with OpenLane](#working-with-openlane)
   - [Start OpenLane](#start-openlane)
   - [Design Preparation](#design-preparation)
   - [Configuration Priority](#configuration-priority)
@@ -162,7 +158,9 @@ The priority order for the OpenLANE settings:
 1. sky130_xxxxx_config.tcl 
 2. config.tcl
 
-## Lab 
+## Lab 1 
+
+#### Synthesis
 
 - *Running OpenLANE :*
 
@@ -185,13 +183,13 @@ The priority order for the OpenLANE settings:
   
   After running synthesis, inside the ```runs/[date]/results/synthesis``` is ```picorv32a_synthesis.v``` which is the mapping of the netlist to      standard cell    library using ABC. The ```runs/[date]/reports/synthesis``` will contain synthesis statistic reports and static timing analysis    reports.
 
-**Estimation of Flip Flop Ratio :**
+#### Estimation of Flip Flop Ratio 
 
 <img width="848" height="600" alt="Screenshot 2025-07-24 123628" src="https://github.com/user-attachments/assets/30b7898a-9a64-4365-9e04-f5027549eead" />
 
 The flipflop ratio is (number of flip flops)/(total number of cells) is 1613/14876 = 0.10843. Or 10.843%
 
-**Slack :**
+#### Slack 
 
 refers to the difference between the required arrival time and the actual arrival time of a signal. If the signal arrives earlier than required, it's called positive slack, indicating the design meets timing. If it arrives later, it's negative slack, meaning a timing violation has occurred. Positive slack is desirable, while negative slack must be fixed to ensure reliable circuit operation.
 
@@ -206,4 +204,5 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
 <img width="848" height="255" alt="Screenshot 2025-07-24 131231" src="https://github.com/user-attachments/assets/ae72bbe7-8a79-40b1-80b4-6af999df93fb" />
 
-
+# Day 2 
+# 
