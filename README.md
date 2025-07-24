@@ -16,11 +16,11 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Simplified RTL to GDSII Flow](#Simplified-RTL-to-GDSII-Flow)
     - [OpenLane Flow](#OpenLane-Flow)
   - [Lab](#Lab)
-    - Running OpenLANE
-    - Design Setup Stage
-    - Running synthesis
-    - Estimation of Flip Flop Ratio
-    - Slack 
+    - [Running OpenLANE]
+    - [Design Setup Stage]
+    - [Running synthesis]
+    - [Estimation of Flip Flop Ratio]
+    - [Slack]
 - [DAY 2](#openlane-installation-and-environment-setup)
 - [OpenLane Directory Structure](#openlane-directory-structure)
 - [Working with OpenLane](#working-with-openlane)
