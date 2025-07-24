@@ -201,5 +201,5 @@ The priority order for the OpenLANE settings:
 
 **Estimation Flip Flop Ratio :**
 
-<img width="848" height="772" alt="Screenshot 2025-07-24 123628" src="https://github.com/user-attachments/assets/30b7898a-9a64-4365-9e04-f5027549eead" />
+<img width="848" height="600" alt="Screenshot 2025-07-24 123628" src="https://github.com/user-attachments/assets/30b7898a-9a64-4365-9e04-f5027549eead" />
 
