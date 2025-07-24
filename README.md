@@ -279,6 +279,29 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
     <img width="848" height="355" alt="Screenshot 2025-07-24 222958" src="https://github.com/user-attachments/assets/aa9bb6ac-70b1-4a1e-a388-22b122db452f" />
     <img width="848" height="347" alt="Screenshot 2025-07-24 223040" src="https://github.com/user-attachments/assets/0f4ab5a9-2147-4725-8bc1-e3412078ac7b" />
 
- 
+
+#### Placement
+
+- Netlist Binding
+  - Netlist binding is the process of mapping the logical representation of a digital design onto standard cell shapes from a library. Each component in the netlist is mapped to a specific shape defined in the       library.
+
+- Initial Placement Design
+  In this phase, components from the netlist are placed within the chip's core area. Key considerations include:
+
+  - Proximity to Pins: Components are strategically placed based on their distance from input and output pins to minimize signal delays.
+
+  - Signal Optimization: Signals requiring rapid propagation, such as FF1 to FF2, are placed close together. Buffer cells may be added for signal integrity.
+
+  - Wire-Length and Capacitance Estimation: Wire length and capacitance estimates guide placement optimization, factoring in signal delay, power consumption, and integrity.
+
+- Final Placement Optimization
+  - The final placement phase fine-tunes the component layout within the chip, optimizing for performance. It assumes an ideal clock and aims to minimize signal delays, conserve power, and meet design                constraints.
+
+  - The next step in the Digital ASIC design flow after floorplanning is placement. The synthesized netlist has been mapped to standard cells and the floorplanning phase has determined the standard cells rows,       enabling placement.
+  
+  *OpenLane does placement in two stages:*
+
+  *Global Placement - Optimized but not legal placement. Optimization works to reduce wirelength by reducing half parameter wirelength
+  Detailed Placement - Legalizes placement of cells into standard cell rows while adhering to global placement*
 
 
