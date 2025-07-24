@@ -305,3 +305,41 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   Detailed Placement - Legalizes placement of cells into standard cell rows while adhering to global placement*
 
 
+
+## Lab 2 
+
+#### FloorPlan
+
+- Run Floorplan - ```run floor_plan```
+
+- To view our floorplan in Magic we need :
+
+  1. Magic technology file (sky130A.tech)
+  2. Def file of floorplan
+  3. Merged LEF file
+
+  head over to the following directory to view the results of floorplan using Magic :
+
+  ```cd /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/<date>/results/floorplan```
+
+- To invoke magic use the command :
+
+  ```magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &```
+  <img width="1842" height="37" alt="Screenshot 2025-07-24 134349" src="https://github.com/user-attachments/assets/40cb2aba-9fc6-43e8-a196-1216bfb0aa48" />
+
+  *Result* : 
+
+  <img width="1442" height="732" alt="Screenshot 2025-07-24 133352" src="https://github.com/user-attachments/assets/b7d0b4e7-4386-4b35-90fe-e37f92b2afa1" />
+
+  To center the view, press "s" to select whole die then press "v" to center the view. Point the cursor to a cell then press "s" to select it, zoom into it by pressing 'z". Type "what" in tkcon to display          information of selected object. These objects might be IO pin, decap cell, or well taps as shown below.
+
+  <img width="1853" height="907" alt="Screenshot 2025-07-24 133602" src="https://github.com/user-attachments/assets/c546ebab-bfb0-4631-9967-62575694aa4a" />
+  if we zoom, we can see that some of the micro, IO pad, and tap-cells have been placed appropriately.
+
+  <img width="1426" height="668" alt="Screenshot 2025-07-24 133654" src="https://github.com/user-attachments/assets/770e1f71-f57d-44e4-b710-31d5bbab4fac" />
+  To get information about the selected object press ```s``` and type ```what``` in console - same as in the above image
+
+  
+
+
+
