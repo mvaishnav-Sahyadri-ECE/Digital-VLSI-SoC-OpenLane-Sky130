@@ -175,3 +175,8 @@ The priority order for the OpenLANE settings:
 
 1. sky130_xxxxx_config.tcl 
 2. config.tcl
+
+###**Lab :**
+
+
+
