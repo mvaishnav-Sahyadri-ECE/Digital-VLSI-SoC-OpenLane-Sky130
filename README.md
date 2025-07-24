@@ -19,7 +19,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Synthesis](#Lab-1)
     - [Estimation of Flip Flop Ratio](#Estimation-of-Flip-Flop-Ratio)
     - [Slack](#Slack)
-- [DAY 2](#openlane-installation-and-environment-setup)
+- [DAY 2](#Day-2)
   - [Start OpenLane](#start-openlane)
   - [Design Preparation](#design-preparation)
   - [Configuration Priority](#configuration-priority)
@@ -205,4 +205,63 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 <img width="848" height="255" alt="Screenshot 2025-07-24 131231" src="https://github.com/user-attachments/assets/ae72bbe7-8a79-40b1-80b4-6af999df93fb" />
 
 # Day 2 
-# 
+# Good Floorplan vs Bad Floorplan and Introduction to Library Cells
+
+#### Floorplan
+
+- Determine Core and Die Dimensions
+
+  - The core is the central area where logic blocks are placed.
+
+  - Width and height depend on standard cell dimensions in the netlist.
+
+  - Utilization factor = (Area occupied by netlist) / (Total core area).
+
+  - Typically ranges between 0.5 to 0.6 (remaining space is for routing and additional cells).
+
+  - Aspect ratio = (Height / Width) of the core.
+
+  - An aspect ratio of 1 produces a square core.
+
+- Preplaced Cells (Macros/IPs)
+
+  - These are complex reusable blocks (e.g., memory, clock-gating cells, comparators).
+
+  - Their placement is user-defined and fixed before automated placement & routing.
+
+  - Automated tools cannot move preplaced cells after definition.
+
+  - Decoupling Capacitors
+
+  - Placed near preplaced cells to stabilize voltage supply.
+
+  - Reason: Long power supply wires cause voltage drop (IR drop) due to resistance/inductance.
+
+  - Solution: Decoupling capacitors provide localized current during switching, keeping voltage within noise margin.
+
+- Power Planning
+
+  - Decoupling capacitors alone are insufficient for full-chip power stability.
+
+  - Ground bounce: Excessive current sinking when many cells switch to '0'.
+
+  - Voltage droop: Insufficient current sourcing when many cells switch to '1'.
+
+  - Solution: Use a power mesh with multiple VDD/VSS taps across the chip for uniform current distribution.
+  
+
+- Pin Placement
+
+- I/O ports are placed between the core and die boundary.
+
+- Placement depends on connected cell locations in the core.
+
+- Clock ports are thicker (low-resistance path) to ensure full-chip drive capability.
+
+- Logical Cell Placement Blockage
+
+- Ensures no cells are placed over die pin locations during automated placement/routing.
+
+- Defined as blockage regions to prevent overlap.
+
+
