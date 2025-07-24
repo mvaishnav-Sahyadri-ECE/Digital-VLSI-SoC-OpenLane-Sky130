@@ -236,10 +236,13 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   - Their placement is user-defined and fixed before automated placement & routing.
 
   - Automated tools cannot move preplaced cells after definition.
-
-  - Decoupling Capacitors
+    
+- Decoupling Capacitors
 
   - Placed near preplaced cells to stabilize voltage supply.
+ 
+    <img width="848" height="603" alt="Untitled" src="https://github.com/user-attachments/assets/1b1b2d2f-0032-4dab-b325-16ebca4d38e6" />
+
 
   - Reason: Long power supply wires cause voltage drop (IR drop) due to resistance/inductance.
 
@@ -258,16 +261,18 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
 - Pin Placement
 
-- I/O ports are placed between the core and die boundary.
+  - I/O ports are placed between the core and die boundary.
 
-- Placement depends on connected cell locations in the core.
+  - Placement depends on connected cell locations in the core.
 
-- Clock ports are thicker (low-resistance path) to ensure full-chip drive capability.
+  - Clock ports are thicker (low-resistance path) to ensure full-chip drive capability.
 
-- Logical Cell Placement Blockage
+  - Logical Cell Placement Blockage
 
-- Ensures no cells are placed over die pin locations during automated placement/routing.
+  - Ensures no cells are placed over die pin locations during automated placement/routing.
 
-- Defined as blockage regions to prevent overlap.
+  - Defined as blockage regions to prevent overlap.
+ 
+ 
 
 
