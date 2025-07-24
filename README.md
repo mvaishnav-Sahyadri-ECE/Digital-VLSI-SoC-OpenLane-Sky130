@@ -419,17 +419,16 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   <img width="848" height="603" alt="dadda" src="https://github.com/user-attachments/assets/a288d9cd-e1cc-4df1-bdf8-d5c77d97a7c4" />
 
 #### Estimation of area of the die 
-
 - In ```runs/<date>/results/floorplan/picorv32a.floorplan.def``` which is a design exchange format, containing the die area and positions.
   
   <img width="848" height="107" alt="Screenshot 2025-07-24 132349" src="https://github.com/user-attachments/assets/472471ea-1a17-4a3b-8d65-77c46b1f1ffb" />
   
 
-```
-DESIGN picorv32a ;
-UNITS DISTANCE MICRONS 1000 ;
-DIEAREA ( 0 0 ) ( 660685 671405 ) ;
-```
+  ```
+  DESIGN picorv32a ;
+  UNITS DISTANCE MICRONS 1000 ;
+  DIEAREA ( 0 0 ) ( 660685 671405 ) ;
+  ```
 
   <img width="848" height="592" alt="Screenshot 2025-07-24 132311" src="https://github.com/user-attachments/assets/2cdf5fe9-7670-4eb5-a1dd-8c9a8d98e253" />
 
