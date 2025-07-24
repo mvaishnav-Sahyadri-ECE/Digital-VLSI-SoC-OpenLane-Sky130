@@ -178,8 +178,8 @@ The priority order for the OpenLANE settings:
 
 **Lab :**
 
--*running OpenLANE :*
+- *running OpenLANE :*
 
-  -Type docker to Invoke openLane tool (inside                     ``` openlane/```)(                                              ```/Desktop/work/tools/openlane_working_dir/openlane```)
+  - Type docker to Invoke openLane tool (inside                     ``` openlane/```)(                                              ```/Desktop/work/tools/openlane_working_dir/openlane```)
   
 
