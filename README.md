@@ -228,6 +228,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   - Aspect ratio = (Height / Width) of the core.
 
   - An aspect ratio of 1 produces a square core.
+    <img width="848" height="367" alt="Screenshot 2025-07-24 223107" src="https://github.com/user-attachments/assets/92da74da-1a22-40b1-9b2e-09e5d11c03c7" />
 
 - Preplaced Cells (Macros/IPs)
 
@@ -236,7 +237,8 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   - Their placement is user-defined and fixed before automated placement & routing.
 
   - Automated tools cannot move preplaced cells after definition.
-    
+    <img width="848" height="367" alt="Screenshot 2025-07-24 223127" src="https://github.com/user-attachments/assets/675fe99d-0725-4d39-ab18-e5d19f703447" />
+
 - Decoupling Capacitors
 
   - Placed near preplaced cells to stabilize voltage supply.
@@ -257,6 +259,8 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   - Voltage droop: Insufficient current sourcing when many cells switch to '1'.
 
   - Solution: Use a power mesh with multiple VDD/VSS taps across the chip for uniform current distribution.
+    <img width="848" height="371" alt="Screenshot 2025-07-24 222913" src="https://github.com/user-attachments/assets/4c943466-20cc-4e48-96ca-6c0bcdba10ab" />
+
   
 
 - Pin Placement
@@ -272,7 +276,9 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   - Ensures no cells are placed over die pin locations during automated placement/routing.
 
   - Defined as blockage regions to prevent overlap.
- 
+    <img width="848" height="355" alt="Screenshot 2025-07-24 222958" src="https://github.com/user-attachments/assets/aa9bb6ac-70b1-4a1e-a388-22b122db452f" />
+    <img width="848" height="347" alt="Screenshot 2025-07-24 223040" src="https://github.com/user-attachments/assets/0f4ab5a9-2147-4725-8bc1-e3412078ac7b" />
+
  
 
 
