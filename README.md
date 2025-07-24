@@ -19,9 +19,14 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Estimation of Flip Flop Ratio](#Estimation-of-Flip-Flop-Ratio)
     - [Slack](#Slack)
 - [DAY 2](#Day-2)
-  - [Start OpenLane](#start-openlane)
-  - [Design Preparation](#design-preparation)
-  - [Configuration Priority](#configuration-priority)
+  - [Theory](#DAY-2)
+    - [Floorplan](#Floorplan)
+    - [Placement](#Placement)
+  - [Lab 2](#Lab-2)
+    - [Floorplan](#FloorPlan)
+    - [Placement](#PlaceMent)
+    - [Characterization](#Library-Characterization)
+    - [Estimation of area of the die](#Estimation-of-area-of-the-die)
 - [Synthesis](#synthesis)
   - [Key Concepts](#key-concepts)
   - [Utilization Factor](#utilisation-factor)
@@ -413,7 +418,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   
   <img width="848" height="603" alt="dadda" src="https://github.com/user-attachments/assets/a288d9cd-e1cc-4df1-bdf8-d5c77d97a7c4" />
 
-#### Estimation off area of the die 
+#### Estimation of area of the die 
 
 - In ```runs/<date>/results/floorplan/picorv32a.floorplan.def``` which is a design exchange format, containing the die area and positions.
   
@@ -429,6 +434,8 @@ DIEAREA ( 0 0 ) ( 660685 671405 ) ;
   <img width="848" height="592" alt="Screenshot 2025-07-24 132311" src="https://github.com/user-attachments/assets/2cdf5fe9-7670-4eb5-a1dd-8c9a8d98e253" />
 
   The die area here is in database units and 1 micron is equivalent to 1000 database units. Thus area of the die is (660685/1000)microns*(671405/1000)microns = 443587 microns squared.
+
+  
 
 
 
