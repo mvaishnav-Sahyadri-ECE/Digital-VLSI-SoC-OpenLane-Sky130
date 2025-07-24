@@ -176,7 +176,7 @@ The priority order for the OpenLANE settings:
 1. sky130_xxxxx_config.tcl 
 2. config.tcl
 
-**Lab :**
+##Lab :
 
 - *running OpenLANE :*
 
@@ -199,4 +199,7 @@ The priority order for the OpenLANE settings:
   
   After running synthesis, inside the ```runs/[date]/results/synthesis``` is ```picorv32a_synthesis.v``` which is the mapping of the netlist to      standard cell    library using ABC. The ```runs/[date]/reports/synthesis``` will contain synthesis statistic reports and static timing analysis    reports.
 
-  
+**Estimation Flip Flop Ratio :**
+
+<img width="848" height="772" alt="Screenshot 2025-07-24 123628" src="https://github.com/user-attachments/assets/30b7898a-9a64-4365-9e04-f5027549eead" />
+
