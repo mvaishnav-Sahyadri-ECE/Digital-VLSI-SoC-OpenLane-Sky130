@@ -180,6 +180,10 @@ The priority order for the OpenLANE settings:
 
 - *running OpenLANE :*
 
-  - Type docker to Invoke openLane tool (inside                     ``` openlane/```)(                                              ```/Desktop/work/tools/openlane_working_dir/openlane```)
-  
+  - Type docker to Invoke openLane tool (inside``` openlane/```)(```/Desktop/work/tools/openlane_working_dir/openlane```)
 
+  - ```./flow.tcl -interactive``` = run script for automating the whole RTL to GDSII flow but in step by step ```-interactive mode```
+
+  - ```package require openlane 0.9```
+ 
+  <img width="723" height="491" alt="Screenshot 2025-07-24 120932" src="https://github.com/user-attachments/assets/42c4e8a2-9a39-4ac9-9a62-2be252e3fb0f" />
