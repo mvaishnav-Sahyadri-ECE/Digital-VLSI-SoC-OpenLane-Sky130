@@ -12,9 +12,9 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 
 - [DAY 1](#DAY-1)
   - [Theory](#DAY-1)
-    - [Introduction to RISC-V](##Introduction-to-RISC-V)
-    - [Simplified RTL to GDSII Flow](##Simplified-RTL-to-GDSII-Flow)
-    - [OpenLane Flow](**OpenLaneFlow**:)
+    - [Introduction to RISC-V](##Introduction-to-RISC-V:)
+    - [Simplified RTL to GDSII Flow](##Simplified-RTL-to-GDSII-Flow:)
+    - [OpenLane Flow](##OpenLaneFlow:)
   - [Lab](##Lab)
   - [2. Floor Planning and Power Planning](#2-floor-planning-and-power-planning)
   - [3. Placement](#3-placement)
@@ -86,7 +86,7 @@ The core of the chip will contain two types of blocks:
 
 <img width="848" height="853" alt="182751377-2810d388-21b0-4df1-b1d4-c72176d80d28" src="https://github.com/user-attachments/assets/d6c9f443-dc08-4587-972a-c46c9b927dad" />
 
-## Introduction to RISC-V : 
+## Introduction to RISC-V: 
 
 - RISC-V stands for Reduced Instruction Set Computing – Version 5 and is designed with simplicity and modularity in mind.
 
@@ -96,7 +96,7 @@ The core of the chip will contain two types of blocks:
 
 - RISC-V is ideal for education, research, and industrial design due to its transparency and scalability.
 
-## Simplified RTL to GDSII Flow : 
+## Simplified RTL to GDSII Flow: 
 
 *Synthesis*
 
@@ -142,7 +142,7 @@ The final Result is [GDSII file format.](https://anysilicon.com/semipedia/gdsii/
 
 RTL to GDSII flow : [Openlane](https://efabless.com/openlane)
 
-**OpenLane Flow**: 
+## OpenLane Flow: 
 
 <img width="848" height="=500" alt="182759711-6b9352ec-7652-4589-af31-53a409eb2830" src="https://github.com/user-attachments/assets/f3cdde11-73e1-496e-9486-3d02f62ff65d"/>
 
