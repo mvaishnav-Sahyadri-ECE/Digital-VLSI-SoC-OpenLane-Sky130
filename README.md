@@ -73,7 +73,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
 ---
 
 # DAY-1
-## Inception-of-Open-source-EDA,OpenLane-and-Sky130-PDK
+# Inception-of-Open-source-EDA,OpenLane-and-Sky130-PDK
 
 we explore the fundamental physical elements of an integrated circuit (IC) : 
 
@@ -193,4 +193,10 @@ The priority order for the OpenLANE settings:
   <img width="848" height="370" alt="Screenshot 2025-07-24 121111" src="https://github.com/user-attachments/assets/d9540d85-6019-4535-8d9a-02e1ee24831c" />
 
 
-- **
+- *Running synthesis :*
+
+  ```run_synthesis``` = Run yosys RTL synthesis, ABC scripts and OpenSTA.
+  
+  After running synthesis, inside the ```runs/[date]/results/synthesis``` is ```picorv32a_synthesis.v``` which is the mapping of the netlist to      standard cell    library using ABC. The ```runs/[date]/reports/synthesis``` will contain synthesis statistic reports and static timing analysis    reports.
+
+  
