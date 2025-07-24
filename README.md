@@ -240,8 +240,8 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 - Decoupling Capacitors
 
   - Placed near preplaced cells to stabilize voltage supply.
- 
-    <img width="848" height="603" alt="Untitled" src="https://github.com/user-attachments/assets/1b1b2d2f-0032-4dab-b325-16ebca4d38e6" />
+    
+    <img width="848" height="603" alt="Untitled" src="https://github.com/user-attachments/assets/c04cf8d8-f3de-49f7-bda0-91d5892b8fe5" />
 
 
   - Reason: Long power supply wires cause voltage drop (IR drop) due to resistance/inductance.
