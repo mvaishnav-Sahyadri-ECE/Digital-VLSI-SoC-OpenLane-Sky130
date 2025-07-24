@@ -1,4 +1,3 @@
-<img width="1355" height="545" alt="Screenshot 2025-07-24 134259" src="https://github.com/user-attachments/assets/1a665742-3379-4f6e-bebc-0cf7de8ef3d4" /> # Digital-VLSI-SoC-OpenLane-Sky130
 
 ## 📘 Project Introduction
 This repository showcases the complete physical design flow using the OpenLANE toolchain with the Sky130 open-source PDK. Executed as part of Digital VLSI SoC Design and Planning Workshop by VLSI System Design Corporation, the project offers a hands-on experience in chip design, starting from RTL to the final GDSII.
