@@ -465,10 +465,10 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
  
  All components are described based on nodes and its values
  .op is the start of SPICE simulation operation where Vin will be sweep from 0 to 2.5 with 0.5 steps
- `tsmc_025um_model.mod` is the model file containing the technological parameters for the 0.25um NMOS and PMOS The steps to simulate in SPICE:
+ tsmc_025um_model.mod is the model file containing the technological parameters for the 0.25um NMOS and PMOS The steps to simulate in SPICE:
  ```
 
-  **Key Points**:  
+ **Key Points**:  
   - PMOS wider → balances current with NMOS.  
   - Node naming essential for simulation.  
   - Example: `M1` (PMOS) and `M2` (NMOS) form inverter.  
@@ -484,9 +484,12 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   5. Display available vectors using display.
   6. Plot specific vectors, e.g., plot vout vs vin, to visualize the circuit behavior.
 
+*Vout vs Vin Plot :*
 
+<img width="887" height="656" alt="Screenshot 2025-07-26 125706" src="https://github.com/user-attachments/assets/4e34ffd1-4c48-4ab0-b0fd-cba749e4df5a" />
 
   
+<img width="1063" height="648" alt="Screenshot 2025-07-26 125749" src="https://github.com/user-attachments/assets/a225d17d-3e87-4ea4-a6d9-4e5caf95988f" />
 
 
 
