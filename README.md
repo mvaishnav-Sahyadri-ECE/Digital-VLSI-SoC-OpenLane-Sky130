@@ -492,6 +492,54 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 <img width="1063" height="648" alt="Screenshot 2025-07-26 125749" src="https://github.com/user-attachments/assets/a225d17d-3e87-4ea4-a6d9-4e5caf95988f" />
 
 
+- From the above we can see that the switching threshold of the latter is exactly midway with reference to Vdd and is slightly shifted to the left with the former
+
+- At the Switching threshold pmos and nmos drain add up to zero. Using this condition and the Drain Current equation we can fix a value for W/L to obtain the required switching voltage
+
+- To obtain a symmetric DC plot, you can scale the aspect ratio of PMOS by 2.5 times
+
+#### SPICE Switching Threshold and Propagation Delay : 
+
+- Switching threshold = Vin is equal to Vout. This the point where both PMOS and NMOS is in saturation or kind of turned on, and leakage current is high. 
+                      If PMOS is thicker than NMOS, the CMOS will have higher switching threshold (1.2V vs 1V) while threshold will be lower when NMOS becomes thicker.
+
+- Propagation delay = rise or fall delay
+
+
+```the line intersection is the switching threshold```
+
+<img width="900" height="541" alt="Screenshot 2025-07-26 135748" src="https://github.com/user-attachments/assets/d3abddf5-db6a-448f-952e-b885b8568468" />
+
+
+transient analysis is used for finding propagation delay :
+
+<img width="247" height="216" alt="Screenshot 2025-07-26 135659" src="https://github.com/user-attachments/assets/7ab2839f-d176-49b6-b1b5-30f36c04c5e2" />
+
+```
+Vin in 0 0 pulse 0 2.5 0 10p 10p 1n 2n 
+*** Simulation Command ***
+.op
+.tran 10p 4n
+```
+<img width="422" height="53" alt="Screenshot 2025-07-26 135650" src="https://github.com/user-attachments/assets/957730e3-5601-4bbc-a6d9-46503961e79a" />
+
+`starts at 0V`
+`ends at 2.5V`
+`starts at time 0`
+`rise time of 10ps`
+`fall time of 10ps`
+`pulse-width of 1ns`
+`period of 2ns`
+
+
+
+
+
+
+
+
+
+
 
 
 
