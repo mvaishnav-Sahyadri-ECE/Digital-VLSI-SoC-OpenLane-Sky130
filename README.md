@@ -696,6 +696,7 @@ magic -T sky130A.tech sky130_inv.mag &
 <img width="848" height="472" alt="Screenshot 2025-07-26 221828" src="https://github.com/user-attachments/assets/48b3df34-f795-4d5b-9c47-09462b66b709" />
 <img width="848" height="532" alt="Screenshot 2025-07-26 223639" src="https://github.com/user-attachments/assets/d9732a2e-a38e-49a6-9374-ab0a0183dd06" />
 <img width="848" height="137" alt="Screenshot 2025-07-26 232204" src="https://github.com/user-attachments/assets/d39c2834-fb34-45d8-8f2f-93e4ffb25187" />
+
 The current sky130A.tech file only includes spacing rules for:
 
 - n-poly resistor to n-diffusion
