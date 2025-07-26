@@ -439,7 +439,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 # Day 3
 # Design a Library Cell using Magic Layout and Ngspice Characterization
 
-#### Designing a Library Cell :
+## Designing a Library Cell :
 
  **SPICE Deck for CMOS Inverter**  
 
@@ -455,7 +455,18 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   - **Nodes**:  
     - Label connections (e.g., `Vin`, `Vdd`, `0`) for SPICE simulation.
       
-<img width="1387" height="602" alt="Screenshot 2025-07-26 125422" src="https://github.com/user-attachments/assets/ecdedc49-6ced-473f-a14c-51678d6357fb" />
+ **Description** : 
+ 
+ <img width="1387" height="602" alt="Screenshot 2025-07-26 125422" src="https://github.com/user-attachments/assets/f647f49c-e4af-4a20-9eaf-dfa6f4d9f203" />
+
+ ```
+ Syntax for the PMOS and NMOS descriptiom:
+ [component name] [drain] [gate] [source] [substrate] [transistor type] W=[width] L=[length]
+ 
+ All components are described based on nodes and its values
+ .op is the start of SPICE simulation operation where Vin will be sweep from 0 to 2.5 with 0.5 steps
+ tsmc_025um_model.mod is the model file containing the technological parameters for the 0.25um NMOS and PMOS The steps to simulate in SPICE:
+ ```
 
   **Key Points**:  
   - PMOS wider → balances current with NMOS.  
