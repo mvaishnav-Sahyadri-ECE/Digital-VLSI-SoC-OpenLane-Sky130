@@ -623,7 +623,7 @@ Vin in 0 0 pulse 0 2.5 0 10p 10p 1n 2n
 
 Final Result : 
 
-<img width="848" height="747" alt="Screenshot 2025-07-26 174207" src="https://github.com/user-attachments/assets/fa5ac8b5-675a-4151-a230-072c64d6137e" />
+<img width="848" height="400" alt="Screenshot 2025-07-26 174207" src="https://github.com/user-attachments/assets/fa5ac8b5-675a-4151-a230-072c64d6137e" />
 
 
 ## Lab 3 
