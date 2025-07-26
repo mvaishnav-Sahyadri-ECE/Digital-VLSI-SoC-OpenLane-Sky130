@@ -29,8 +29,8 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Estimation of area of the die](#Estimation-of-area-of-the-die)
 - [Day 3](#Day-3)
   - [Theory](#DAY-3)
-    - [Key Concepts](#key-concepts)
-    - [Utilization Factor](#utilisation-factor)
+    - [Designing a Library Cell](#Designing-a-Library-Cell)
+    - [SPICE Switching Threshold and Propagation Delay](#SPICE-Switching-Threshold-and-Propagation-Delay)
     - [Aspect Ratio](#aspect-ratio)
 - [Floorplanning](#floorplanning)
   - [Pre-Placed Cells](#pre-placed-cells)
@@ -439,7 +439,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 # Day 3
 # Design a Library Cell using Magic Layout and Ngspice Characterization
 
-## Designing a Library Cell :
+## Designing a Library Cell 
 
  **SPICE Deck for CMOS Inverter**  
 
@@ -498,7 +498,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
 - To obtain a symmetric DC plot, you can scale the aspect ratio of PMOS by 2.5 times
 
-#### SPICE Switching Threshold and Propagation Delay : 
+#### SPICE Switching Threshold and Propagation Delay 
 
 - Switching threshold = Vin is equal to Vout. This the point where both PMOS and NMOS is in saturation or kind of turned on, and leakage current is high. 
                       If PMOS is thicker than NMOS, the CMOS will have higher switching threshold (1.2V vs 1V) while threshold will be lower when NMOS becomes thicker.
