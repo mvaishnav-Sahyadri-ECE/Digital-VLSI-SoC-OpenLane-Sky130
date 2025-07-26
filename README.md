@@ -536,6 +536,7 @@ Vin in 0 0 pulse 0 2.5 0 10p 10p 1n 2n
 <img width="1106" height="889" alt="187056370-18949899-a158-4307-96d9-d5c06bbeed66" src="https://github.com/user-attachments/assets/754e0757-5b33-494c-95ae-2a287599dc6d" />
 
 #### 16-Mask CMOS Process 
+*inverter*
 
 1. Substrate Selection
    - P-type Si wafer (5–50 Ω·cm, ⟨100⟩ orientation).
