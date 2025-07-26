@@ -27,10 +27,11 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Placement](#Place-Ment)
     - [Characterization](#Library-Characterization)
     - [Estimation of area of the die](#Estimation-of-area-of-the-die)
-- [Synthesis](#synthesis)
-  - [Key Concepts](#key-concepts)
-  - [Utilization Factor](#utilisation-factor)
-  - [Aspect Ratio](#aspect-ratio)
+- [Day 3](#Day-3)
+  - [Theory](#DAY-3)
+    - [Key Concepts](#key-concepts)
+    - [Utilization Factor](#utilisation-factor)
+    - [Aspect Ratio](#aspect-ratio)
 - [Floorplanning](#floorplanning)
   - [Pre-Placed Cells](#pre-placed-cells)
   - [Decoupling Capacitors](#decoupling-capacitors-to-the-pre-placed-cells)
@@ -433,6 +434,46 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   <img width="848" height="592" alt="Screenshot 2025-07-24 132311" src="https://github.com/user-attachments/assets/2cdf5fe9-7670-4eb5-a1dd-8c9a8d98e253" />
 
   The die area here is in database units and 1 micron is equivalent to 1000 database units. Thus area of the die is (660685/1000)microns*(671405/1000)microns = 443587 microns squared.
+
+
+# Day 3
+# Design a Library Cell using Magic Layout and Ngspice Characterization
+
+#### Designing a Library Cell :
+
+ **SPICE Deck for CMOS Inverter**  
+
+  - **Netlist** describing component connectivity.  
+  - **W/L** values:  
+    - `0.375u/0.25u` = Width=375nm, Length=250nm *(PMOS typically 2-3x wider than NMOS)*.  
+  - **Voltages**:  
+    - Gate supply (`Vin`): 2.5V *(scaled with length)*.  
+    - `Vdd`: 2.5V (PMOS source).  
+    - `0`: Ground (NMOS source).  
+  - **Capacitances**:  
+    - Load caps: `10ff` (attached to nodes).  
+  - **Nodes**:  
+    - Label connections (e.g., `Vin`, `Vdd`, `0`) for SPICE simulation.
+      
+<img width="1387" height="602" alt="Screenshot 2025-07-26 125422" src="https://github.com/user-attachments/assets/ecdedc49-6ced-473f-a14c-51678d6357fb" />
+
+  **Key Points**:  
+  - PMOS wider → balances current with NMOS.  
+  - Node naming essential for simulation.  
+  - Example: `M1` (PMOS) and `M2` (NMOS) form inverter.  
+
+  
+  
+#### Follow these steps for simulation in ngspice :
+ 
+  1. Source the circuit file in Ngspice using source <file_name>.cir.
+  2. Execute the simulations using the run command.
+  3. Use setplot to prepare for plotting.
+  4. For DC analysis (as indicated in the .cir file), use dc1 to prepare the DC plot.
+  5. Display available vectors using display.
+  6. Plot specific vectors, e.g., plot vout vs vin, to visualize the circuit behavior.
+
+
 
   
 
