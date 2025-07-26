@@ -439,7 +439,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 # Day 3
 # Design a Library Cell using Magic Layout and Ngspice Characterization
 
-## Designing a Library Cell 
+#### Designing a Library Cell 
 
  **SPICE Deck for CMOS Inverter**  
 
@@ -530,6 +530,100 @@ Vin in 0 0 pulse 0 2.5 0 10p 10p 1n 2n
 `fall time of 10ps`
 `pulse-width of 1ns`
 `period of 2ns`
+
+**SPICE transient analysis :**
+
+<img width="1106" height="889" alt="187056370-18949899-a158-4307-96d9-d5c06bbeed66" src="https://github.com/user-attachments/assets/754e0757-5b33-494c-95ae-2a287599dc6d" />
+
+#### 16-Mask CMOS Process 
+
+1. Substrate Selection
+   - P-type Si wafer (5–50 Ω·cm, ⟨100⟩ orientation).
+
+   - Key: Substrate doping < well doping.
+
+2. Active Region Isolation (LOCOS)
+   - Mask 1: Photoresist patterning to protect transistor regions.
+
+   - Layers:
+
+     - Si₃N₄ (80nm): Blocks SiO₂ growth.
+
+     - Field Oxide (LOCOS): Grows in unprotected areas (~1µm).
+
+   - Result: Isolated active regions for NMOS/PMOS.
+
+3. Well Formation
+   - N-well (PMOS):
+
+     - Mask 2: Protects NMOS region.
+
+     - Phosphorus implant @400 keV.
+
+   - P-well (NMOS):
+
+     - Mask 3: Protects PMOS region.
+
+     - Boron implant @200 keV.
+
+     - Drive-in diffusion to deepen wells.
+
+4. Gate Formation
+   - Threshold Voltage Control:
+
+     - Mask 4/5: Boron (NMOS) & Arsenic (PMOS) implants.
+
+     - Gate Oxide: Etch/regrow 10nm SiO₂ (high quality).
+
+     - Mask 6: Poly-Si gate patterning.
+
+5. Lightly Doped Drain (LDD)
+   - Purpose: Prevent hot-electron/short-channel effects.
+
+   - Mask 7: N⁻ implant (Phosphorus) for NMOS.
+
+   - Mask 8: P⁻ implant (Boron) for PMOS.
+
+   - Sidewall spacers: SiO₂ deposition + anisotropic etch.
+
+6. Source/Drain Formation
+   - Mask 9: N⁺ implant (Arsenic) for NMOS.
+
+   - Mask 10: P⁺ implant (Boron) for PMOS.
+
+   - Screen oxide prevents channeling.
+
+7. Contacts & Local Interconnects
+   - TiN/TiSi₂ Formation:
+
+     - Ti sputtering → RTA (600–700°C) → TiSi₂ (gates) + TiN (routing).
+
+   - Mask 11: Etch TiN for first-layer contacts.
+
+8. Metallization (Al/W)
+   - Planarization: PSG deposition + CMP.
+
+   - Contact Holes:
+
+     - Mask 12/14: Via etching.
+
+     - Mask 13/15: Aluminum/W deposition.
+
+   - Mask 16: Top-layer contact/pad opening.
+
+*Key Insights :*
+- PMOS Width > NMOS (2–3x) for current balancing.
+
+- LDD reduces leakage; Sidewall spacers protect LDD during S/D implants.
+
+- TiSi₂ lowers gate resistance; TiN aids local routing.
+
+- 16 masks cover wells, implants, gates, contacts, and metals.
+
+## Lab 3 
+
+
+
 
 
 
