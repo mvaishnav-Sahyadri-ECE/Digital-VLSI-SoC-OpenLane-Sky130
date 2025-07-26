@@ -687,10 +687,11 @@ ls
 magic -T sky130A.tech sky130_inv.mag &
 ```
 
--Inside the drc_tests/ are the .mag layout files and the sky130A.tech.
--Open magic with ```poly.mag``` as input: magic poly.mag from file --> open
--Focus on Incorrect poly.9.the spacing between polyresistor with poly or diff/tap must at least be 0.480um. Using command box in console, we can see that the          distance violated but there is no DRC violations shown. Our goal is to fix the tech file to include that DRC.
- <img width="848" height="82" alt="Screenshot 2025-07-26 223816" src="https://github.com/user-attachments/assets/3e9f1f09-d4dd-4fe1-a0f5-c647e84e85c4" />
+- Inside the drc_tests/ are the .mag layout files and the sky130A.tech.
+- Open magic with ```poly.mag``` as input: magic poly.mag from file --> open
+- Focus on Incorrect poly.9.the spacing between polyresistor with poly or diff/tap must at least be 0.480um. Using command box in console, we can see that   the distance violated but there is no DRC violations shown. Our goal is to fix the tech file to include that DRC.
+<img width="1131" height="63" alt="Screenshot 2025-07-26 232040" src="https://github.com/user-attachments/assets/102cbe43-321e-451d-8e0e-82f87013bd23" />
+
 
 <img width="848" height="472" alt="Screenshot 2025-07-26 221828" src="https://github.com/user-attachments/assets/48b3df34-f795-4d5b-9c47-09462b66b709" />
 <img width="848" height="532" alt="Screenshot 2025-07-26 223639" src="https://github.com/user-attachments/assets/d9732a2e-a38e-49a6-9374-ab0a0183dd06" />
@@ -711,6 +712,7 @@ These additions ensure proper isolation between resistor and non-resistor poly l
 
 <img width="517" height="193" alt="Screenshot 2025-07-26 223705" src="https://github.com/user-attachments/assets/db2ff8f4-d82f-454b-bf15-88568d65e412" />
 <img width="545" height="151" alt="Screenshot 2025-07-26 223718" src="https://github.com/user-attachments/assets/e36aa647-54e9-460a-bd63-e89fcb35c495" />
+<img width="368" height="137" alt="Screenshot 2025-07-26 232204" src="https://github.com/user-attachments/assets/d39c2834-fb34-45d8-8f2f-93e4ffb25187" />
 
 To apply the new poly resistor spacing rules:
 
