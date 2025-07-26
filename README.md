@@ -533,7 +533,7 @@ Vin in 0 0 pulse 0 2.5 0 10p 10p 1n 2n
 
 **SPICE transient analysis :**
 
-<img width="1106" height="889" alt="187056370-18949899-a158-4307-96d9-d5c06bbeed66" src="https://github.com/user-attachments/assets/754e0757-5b33-494c-95ae-2a287599dc6d" />
+<img width="848" height="889" alt="187056370-18949899-a158-4307-96d9-d5c06bbeed66" src="https://github.com/user-attachments/assets/754e0757-5b33-494c-95ae-2a287599dc6d" />
 
 #### 16-Mask CMOS Process 
 *inverter*
@@ -626,26 +626,109 @@ Vin in 0 0 pulse 0 2.5 0 10p 10p 1n 2n
 #### Spice extraction of inverter in magic 
 
 - Clone vsdstdcelldesign. Copy the techfile ```sky130A.tech``` from ```pdks/sky130A/libs.tech/magic/``` to directory of the cloned repo. 
-  <img width="726" height="52" alt="Screenshot 2025-07-26 174607" src="https://github.com/user-attachments/assets/b185ee77-7baf-4d9d-a14e-8f3ce328d139" />
+  <img width="848" height="52" alt="Screenshot 2025-07-26 174607" src="https://github.com/user-attachments/assets/b185ee77-7baf-4d9d-a14e-8f3ce328d139" />
 
 - View the mag file using magic ```magic -T sky130A.tech sky130_inv.mag &```
-  <img width="717" height="57" alt="Screenshot 2025-07-26 174719" src="https://github.com/user-attachments/assets/144921cd-5e35-4c8b-9918-89460b008333" />
+  <img width="848" height="57" alt="Screenshot 2025-07-26 174719" src="https://github.com/user-attachments/assets/144921cd-5e35-4c8b-9918-89460b008333" />
   
 - Make an extract file ```.ext``` by typing extract all in the tkon terminal of magic. 
 
 - Extract the ```.spice``` file from this ext file by typing ```ext2spice cthresh 0 rthresh 0``` then ```ext2spice``` in the tkon terminal.
 
-  <img width="498" height="260" alt="Screenshot 2025-07-26 174858" src="https://github.com/user-attachments/assets/76fb85c3-e007-4032-9925-8800b238c3e0" />
+  <img width="848" height="260" alt="Screenshot 2025-07-26 174858" src="https://github.com/user-attachments/assets/76fb85c3-e007-4032-9925-8800b238c3e0" />
   
 #### Post-Layout Spice simulation (ngspice)
 
 - Open the spice file by typing ```ngspice sky130A_inv.spice``` and Generate a graph using plot y vs time a
   
-  <img width="1850" height="875" alt="Screenshot 2025-07-26 181256" src="https://github.com/user-attachments/assets/6b11a52d-e7dd-4626-882e-e8d24f331810" />
+  <img width="848" height="875" alt="Screenshot 2025-07-26 181256" src="https://github.com/user-attachments/assets/6b11a52d-e7dd-4626-882e-e8d24f331810" />
 
-  <img width="1128" height="487" alt="Screenshot 2025-07-26 181156" src="https://github.com/user-attachments/assets/fa7d1c08-da3b-4118-83f7-42ff78559790" />
+  <img width="848" height="487" alt="Screenshot 2025-07-26 181156" src="https://github.com/user-attachments/assets/fa7d1c08-da3b-4118-83f7-42ff78559790" />
 
   
+#### Slew rate and Propagation delay 
+
+- Rise Transition ```output transition time from 20%(0.66V) to 80%(2.64V)``` : 0.03581ns
+  ```(2.156 - 2.12019)```
+  <img width="848" height="78" alt="Screenshot 2025-07-26 213748" src="https://github.com/user-attachments/assets/02b52e5c-fff7-4283-8258-e47d702eabac" />
+
+- Fall Transition ```output transition time from 80%(2.64V) to 20%(0.66V)``` : 0.5969ns
+  <img width="848" height="77" alt="Screenshot 2025-07-26 214030" src="https://github.com/user-attachments/assets/b9a32895-a01c-4740-9f63-48f32acf497e" />
+
+- Rise delay ```delay between 50%(1.65V) of input to 50%(1.65V) of output``` : 0.0303ns
+  <img width="848" height="72" alt="Screenshot 2025-07-26 214545" src="https://github.com/user-attachments/assets/158e2eaf-4f69-4fbd-82bb-5b2c5814962d" />
+
+- Fall Delay ```delay between 50%(1.65V) of input to 50%(1.65V) of output``` : 0.0483ns
+
+#### Fix Tech File DRC via Magic
+
+
+All technology-specific information comes from a technology file. This file includes such information as layer types used, electrical connectivity between types,     design rules, rules for mask generation, and rules for extracting netlists for circuit simulation - [DRC rules for SKY130nm PDK](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#rules-periphery--page-root)
+
+Clone custom inverter standard cell design :
+
+```
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Clone the repository with custom inverter design
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+# Change into repository directory
+cd vsdstdcelldesign
+ 
+# Copy magic tech file to the repo directory for easy access
+cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
+
+# Check contents whether everything is present
+ls
+
+# Command to open custom inverter layout in magic
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+-Inside the drc_tests/ are the .mag layout files and the sky130A.tech.
+-Open magic with ```poly.mag``` as input: magic poly.mag from file --> open
+-Focus on Incorrect poly.9.the spacing between polyresistor with poly or diff/tap must at least be 0.480um. Using command box in console, we can see that the          distance violated but there is no DRC violations shown. Our goal is to fix the tech file to include that DRC.
+ <img width="848" height="82" alt="Screenshot 2025-07-26 223816" src="https://github.com/user-attachments/assets/3e9f1f09-d4dd-4fe1-a0f5-c647e84e85c4" />
+
+<img width="848" height="472" alt="Screenshot 2025-07-26 221828" src="https://github.com/user-attachments/assets/48b3df34-f795-4d5b-9c47-09462b66b709" />
+<img width="848" height="532" alt="Screenshot 2025-07-26 223639" src="https://github.com/user-attachments/assets/d9732a2e-a38e-49a6-9374-ab0a0183dd06" />
+
+The current sky130A.tech file only includes spacing rules for:
+
+- n-poly resistor to n-diffusion
+
+- p-poly resistor to p-diffusion
+
+We are now adding two new critical spacing rules (highlighted in green):
+
+- Left rule: Spacing between n-poly resistor and regular poly (non-resistor)
+
+- Right rule: Spacing between p-poly resistor and regular poly (non-resistor)
+
+These additions ensure proper isolation between resistor and non-resistor poly layers in the design
+
+<img width="517" height="193" alt="Screenshot 2025-07-26 223705" src="https://github.com/user-attachments/assets/db2ff8f4-d82f-454b-bf15-88568d65e412" />
+<img width="545" height="151" alt="Screenshot 2025-07-26 223718" src="https://github.com/user-attachments/assets/e36aa647-54e9-460a-bd63-e89fcb35c495" />
+
+To apply the new poly resistor spacing rules:
+
+Run ```tech load sky130A.tech``` to update the rules.
+
+Use ```drc check``` – violations appear as white dots on poly layers.
+
+Inspect each violation with ```drc find```
+
+New rules cover:
+
+n-poly ↔ poly spacing
+
+p-poly ↔ poly spacing
+
+<img width="848" height="87" alt="Screenshot 2025-07-26 223505" src="https://github.com/user-attachments/assets/a6ec936c-e03e-440c-9729-59cd987577ab" />
+
+
 
   
 
