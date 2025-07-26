@@ -513,7 +513,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 
 ```transient analysis is used for finding propagation delay :```
 
-<img width="848" height="216" alt="Screenshot 2025-07-26 135659" src="https://github.com/user-attachments/assets/7ab2839f-d176-49b6-b1b5-30f36c04c5e2" />
+<img width="200" height="216" alt="Screenshot 2025-07-26 135659" src="https://github.com/user-attachments/assets/7ab2839f-d176-49b6-b1b5-30f36c04c5e2" />
 
 ```
 Vin in 0 0 pulse 0 2.5 0 10p 10p 1n 2n 
