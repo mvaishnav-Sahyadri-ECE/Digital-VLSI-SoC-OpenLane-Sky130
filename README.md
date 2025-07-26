@@ -623,18 +623,29 @@ Vin in 0 0 pulse 0 2.5 0 10p 10p 1n 2n
 
 ## Lab 3 
 
+#### Spice extraction of inverter in magic 
+
 - Clone vsdstdcelldesign. Copy the techfile ```sky130A.tech``` from ```pdks/sky130A/libs.tech/magic/``` to directory of the cloned repo. 
   <img width="726" height="52" alt="Screenshot 2025-07-26 174607" src="https://github.com/user-attachments/assets/b185ee77-7baf-4d9d-a14e-8f3ce328d139" />
 
 - View the mag file using magic ```magic -T sky130A.tech sky130_inv.mag &```
   <img width="717" height="57" alt="Screenshot 2025-07-26 174719" src="https://github.com/user-attachments/assets/144921cd-5e35-4c8b-9918-89460b008333" />
   
-- Make an extract file ```.ext``` by typing extract all in the tkon terminal of magic.
+- Make an extract file ```.ext``` by typing extract all in the tkon terminal of magic. 
 
-- Extract the ```.spice``` file from this ext file by typing ```ext2spice cthresh 0 rthresh 0``` then ```ext2spice``` in the tcon terminal.
+- Extract the ```.spice``` file from this ext file by typing ```ext2spice cthresh 0 rthresh 0``` then ```ext2spice``` in the tkon terminal.
 
   <img width="498" height="260" alt="Screenshot 2025-07-26 174858" src="https://github.com/user-attachments/assets/76fb85c3-e007-4032-9925-8800b238c3e0" />
+  
+#### Post-Layout Spice simulation (ngspice)
 
+- Open the spice file by typing ```ngspice sky130A_inv.spice``` and Generate a graph using plot y vs time a
+  
+  <img width="1850" height="875" alt="Screenshot 2025-07-26 181256" src="https://github.com/user-attachments/assets/6b11a52d-e7dd-4626-882e-e8d24f331810" />
+
+  <img width="1128" height="487" alt="Screenshot 2025-07-26 181156" src="https://github.com/user-attachments/assets/fa7d1c08-da3b-4118-83f7-42ff78559790" />
+
+  
 
   
 
