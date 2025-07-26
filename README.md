@@ -465,7 +465,7 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
  
  All components are described based on nodes and its values
  .op is the start of SPICE simulation operation where Vin will be sweep from 0 to 2.5 with 0.5 steps
- tsmc_025um_model.mod is the model file containing the technological parameters for the 0.25um NMOS and PMOS The steps to simulate in SPICE:
+ `tsmc_025um_model.mod` is the model file containing the technological parameters for the 0.25um NMOS and PMOS The steps to simulate in SPICE:
  ```
 
   **Key Points**:  
