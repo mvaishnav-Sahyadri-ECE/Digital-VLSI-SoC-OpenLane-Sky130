@@ -711,7 +711,7 @@ We are now adding two new critical spacing rules (highlighted in green):
 These additions ensure proper isolation between resistor and non-resistor poly layers in the design
 
 <img width="848" height="193" alt="Screenshot 2025-07-26 223705" src="https://github.com/user-attachments/assets/db2ff8f4-d82f-454b-bf15-88568d65e412" />
-<img width="848" height="151" alt="Screenshot 2025-07-26 223718" src="https://github.com/user-attachments/assets/e36aa647-54e9-460a-bd63-e89fcb35c495" />
+<img width="400" height="151" alt="Screenshot 2025-07-26 223718" src="https://github.com/user-attachments/assets/e36aa647-54e9-460a-bd63-e89fcb35c495" />
 
 
 To apply the new poly resistor spacing rules:
