@@ -753,9 +753,9 @@ p-poly ↔ poly spacing
 - Type the Command in tkcon window to set grid as tracks of locali layer
    ```grid 0.46um 0.34um 0.23um 0.17um```
 
-  <img width="1847" height="848" alt="Screenshot 2025-07-28 121258" src="https://github.com/user-attachments/assets/cc10810e-5776-436d-a05d-44b4b84273b9" />
+  <img width="848" height="848" alt="Screenshot 2025-07-28 121258" src="https://github.com/user-attachments/assets/cc10810e-5776-436d-a05d-44b4b84273b9" />
 
-  <img width="470" height="608" alt="Screenshot 2025-07-27 011229" src="https://github.com/user-attachments/assets/5c5bc380-b802-41c4-b1a4-0f610579fcf9" />
+  <img width="848" height="608" alt="Screenshot 2025-07-27 011229" src="https://github.com/user-attachments/assets/5c5bc380-b802-41c4-b1a4-0f610579fcf9" />
 
 - Two Things to verify : Pins lies on intersections and cell width is 3. We can make use of grids to identify cell width.
 
@@ -766,13 +766,27 @@ p-poly ↔ poly spacing
   - save the inverter by your custom name save `sky130_vsdinv.mag`
     then type `lef write` in tkcon window. This will create files as shown below.
     
-    <img width="985" height="146" alt="Screenshot 2025-07-27 015605" src="https://github.com/user-attachments/assets/ae0c769f-27b8-4342-84ce-398afc2b430d" />
+    <img width="848" height="146" alt="Screenshot 2025-07-27 015605" src="https://github.com/user-attachments/assets/ae0c769f-27b8-4342-84ce-398afc2b430d" />
 
 - Pluging-in Custom Inverter Cell into Openlane
 
   - Copy the LEF file `sky130_vsdinv.lef` and `sky130_fd_sc_hd__*` from `openlane/vsdstdcelldesign/libs` to `picorv32a/src` directory.
  
-  - 
+  - add these commands into `config.tcl`
+    ```
+    set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/scr/sly130_fd_sc_hd__typical.lib"
+    set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/scr/sly130_fd_sc_hd__fast.lib"
+    set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/scr/sly130_fd_sc_hd__slow.lib"
+    set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/scr/sly130_fd_sc_hd__typical.lib"
+
+    set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+    ```
+    
+    <img width="848" height="582" alt="Screenshot 2025-07-30 004441" src="https://github.com/user-attachments/assets/db94ac64-9f76-400c-83bc-161d92eb155d" />
+
+    
+
+    
  
     
 
