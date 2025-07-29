@@ -736,6 +736,13 @@ p-poly ↔ poly spacing
 
 <img width="400" height="87" alt="Screenshot 2025-07-26 223505" src="https://github.com/user-attachments/assets/a6ec936c-e03e-440c-9729-59cd987577ab" />
 
+# DAY 4 
+# Pre-layout Timing Analysis and Importance of Good Clock Tree 
+
+## Lab 
+
+
+
 
 
   
