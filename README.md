@@ -641,6 +641,9 @@ Final Result :
 - Extract the ```.spice``` file from this ext file by typing ```ext2spice cthresh 0 rthresh 0``` then ```ext2spice``` in the tkon terminal.
 
   <img width="848" height="260" alt="Screenshot 2025-07-26 174858" src="https://github.com/user-attachments/assets/76fb85c3-e007-4032-9925-8800b238c3e0" />
+
+  <img width="848" height="721" alt="Screenshot 2025-07-26 172928" src="https://github.com/user-attachments/assets/9d946e89-dce5-46dd-be89-e8f93b824935" />
+
   
 #### Post-Layout Spice simulation (ngspice)
 
@@ -740,6 +743,40 @@ p-poly ↔ poly spacing
 # Pre-layout Timing Analysis and Importance of Good Clock Tree 
 
 ## Lab 
+
+- Tracks.info used in routing stage (`/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd`)
+
+  <img width="848" height="496" alt="Screenshot 2025-07-30 000535" src="https://github.com/user-attachments/assets/5b0f8ca6-d1d9-4205-afaa-3d4e0c39272e" />
+
+  <img width="848" height="490" alt="Screenshot 2025-07-30 000549" src="https://github.com/user-attachments/assets/bbf1a286-b4cd-44bf-a572-249b2c87fe0e" />
+
+- Type the Command in tkcon window to set grid as tracks of locali layer
+   ```grid 0.46um 0.34um 0.23um 0.17um```
+
+  <img width="1847" height="848" alt="Screenshot 2025-07-28 121258" src="https://github.com/user-attachments/assets/cc10810e-5776-436d-a05d-44b4b84273b9" />
+
+  <img width="470" height="608" alt="Screenshot 2025-07-27 011229" src="https://github.com/user-attachments/assets/5c5bc380-b802-41c4-b1a4-0f610579fcf9" />
+
+- Two Things to verify : Pins lies on intersections and cell width is 3. We can make use of grids to identify cell width.
+
+- Extracting `LEF` file
+
+  - open the mag file 
+    ```magic -T sky130A.tech sky130_inv.mag &```
+  - save the inverter by your custom name save `sky130_vsdinv.mag`
+    then type `lef write` in tkcon window. This will create files as shown below.
+    
+    <img width="985" height="146" alt="Screenshot 2025-07-27 015605" src="https://github.com/user-attachments/assets/ae0c769f-27b8-4342-84ce-398afc2b430d" />
+
+- Pluging-in Custom Inverter Cell into Openlane
+
+  - Copy the LEF file `sky130_vsdinv.lef` and `sky130_fd_sc_hd__*` from `openlane/vsdstdcelldesign/libs` to `picorv32a/src` directory.
+ 
+  - 
+ 
+    
+
+
 
 
 
