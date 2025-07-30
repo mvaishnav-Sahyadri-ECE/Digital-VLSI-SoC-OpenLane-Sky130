@@ -796,6 +796,63 @@ p-poly ↔ poly spacing
 
   - Run docker and prepare the design picorv32a. You may make use of overwrite command : `prep -design picorv32a -tag <date> -overwrite`
  
+    <img width="848" height="905" alt="Screenshot 2025-07-30 114253" src="https://github.com/user-attachments/assets/19bf13b9-a610-45c8-8fe9-16e4f2078b63" />
+
+  - setting lefs
+
+    <img width="848" height="906" alt="Screenshot 2025-07-30 114507" src="https://github.com/user-attachments/assets/2f8a29cb-3e5e-4009-a2ae-150f1d243454" />
+ 
+    ```
+    set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+    add_lefs -src $lefs
+    ```
+    
+  - running synthesis ```run_synthesis```
+ 
+    <img width="848" height="481" alt="Screenshot 2025-07-28 130724" src="https://github.com/user-attachments/assets/bd6f4d92-62b0-427f-badd-2cc9968b03a4" />
+ 
+    <img width="848" height="387" alt="Screenshot 2025-07-30 115338" src="https://github.com/user-attachments/assets/7a3485fb-6d89-40cc-84f6-17800e613640" />
+ 
+    <img width="848" height="897" alt="Screenshot 2025-07-28 222817" src="https://github.com/user-attachments/assets/84f09731-1370-4d3c-b9c8-409273ba04f7" />
+ 
+    we get to see --> chip area, wns (worst timing violation) and tns (total negative slack)
+
+    merged.lef in tmp directory with our custom inverter as macro
+    
+    <img width="848" height="497" alt="Screenshot 2025-07-28 134549" src="https://github.com/user-attachments/assets/c044a361-b554-41d6-a30f-f4d218789c12" />
+
+
+- we change some variable to get better timing improvement. This results change in chip area.so we'll change some variables because Those timing values aren't          ideal.
+
+    ```
+    echo $::env(SYNTH_STRATEGY)
+    
+    set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+    echo $::env(SYNTH_BUFFERING)
+    // make sure its enabled i.e 1
+
+    echo $::env(SYNTH_SIZING)
+   
+    set ::env(SYNTH_SIZING) 1
+
+    echo $::env(SYNTH_DRIVING_CELL
+    // check whether it's the proper cell or not
+
+    run_synthesis
+    
+    ```
+
+    <img width="848" height="921" alt="Screenshot 2025-07-28 223452" src="https://github.com/user-attachments/assets/354f77d9-484b-4fc9-82db-f98ba83e714f" />
+
+    <img width="848" height="905" alt="Screenshot 2025-07-28 225050" src="https://github.com/user-attachments/assets/8fd2aa54-a14f-4a08-9c63-2e0da79a209a" />
+
+    values area has increased and worst negative slack has become 0
+   
+
+    
+
+ 
     
     
 
