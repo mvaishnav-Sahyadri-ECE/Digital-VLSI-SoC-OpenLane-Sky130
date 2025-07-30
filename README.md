@@ -797,7 +797,8 @@ p-poly ↔ poly spacing
 
   - Run docker and prepare the design picorv32a. You may make use of overwrite command : `prep -design picorv32a -tag <date> -overwrite`
  
-    <img width="848" height="905" alt="Screenshot 2025-07-30 114253" src="https://github.com/user-attachments/assets/19bf13b9-a610-45c8-8fe9-16e4f2078b63" />
+    <img width="848" height="902" alt="Screenshot 2025-07-30 131638" src="https://github.com/user-attachments/assets/516d4ac8-968c-4285-9784-cfb003c45fed" />
+
 
   - setting lefs
 
