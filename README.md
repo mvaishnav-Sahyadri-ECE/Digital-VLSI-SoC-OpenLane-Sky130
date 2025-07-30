@@ -1047,16 +1047,24 @@ When constructing a clock tree, three critical parameters must be addressed: (1)
 - Post-Route OpenSTA timing analysis
 
   <img width="1857" height="936" alt="Screenshot 2025-07-29 195516" src="https://github.com/user-attachments/assets/5d7777a5-7e44-4c99-a3c7-7ad856b9cfe1" />
+  
+  
 
 **Picorv32a.def.png**
 
+
 <img width="751" height="817" alt="Screenshot 2025-07-30 133612" src="https://github.com/user-attachments/assets/09ab689e-e161-4e35-a7cf-3023380250a4" />
+
 
 **Picorv32a.gds.png**
 
+
 <img width="1055" height="857" alt="Screenshot 2025-07-29 224044" src="https://github.com/user-attachments/assets/ace98a9a-4742-4409-8a97-660841e75a81" />
 
+
+
 **GDS**
+
 Stands for Graphic Design System. This is the file that is sent to the foundry and is called "tape-out".
 
 In openLane use the command run_magic
