@@ -743,6 +743,30 @@ p-poly ↔ poly spacing
 # DAY 4 
 # Pre-layout Timing Analysis and Importance of Good Clock Tree 
 
+## Theory
+
+**Delay Table**
+
+To minimize clock skew between endpoints of a clock tree (preventing signal arrival at different times):
+
+- Equal capacitive load: Buffers at the same level must drive identical capacitive loads to ensure uniform timing delay (latency).
+
+- Uniform buffer sizing: Buffers on the same level must be the same size, as differing sizes lead to varying W/L ratios, resistances, and RC constants—resulting in    inconsistent delays.
+
+To minimize clock skew in a clock tree distribution network, buffers at the same hierarchical level must maintain identical capacitive loads and uniform buffer sizes to ensure consistent propagation delays across all branches. While different levels may employ varying buffer sizes and drive different capacitive loads, the symmetric matching of these characteristics within each level guarantees balanced cumulative delays along all clock paths, effectively eliminating skew. The timing behavior of these buffer cells is characterized through delay tables in liberty files, where the primary delay component - output slew - is determined by both the output capacitive load and input transition time. This input transition time itself depends on the preceding buffer's output characteristics and its own transition delay properties, creating a cascaded timing relationship that must be carefully modeled for accurate skew prediction and control.
+
+<img width="1166" height="635" alt="Screenshot 2025-07-30 223725" src="https://github.com/user-attachments/assets/15e6a690-8f95-41c5-8027-a0e04d836538" />
+
+**Timing Analysis (using Ideal Clocks)**
+
+During pre-layout static timing analysis (STA), the verification is performed using ideal clock models that do not yet account for the physical implementation effects. At this stage, the analysis excludes both clock buffer delays and net delays caused by RC parasitics, as the complete routing information is not yet available. Instead, wire delay estimates are derived from the process design kit (PDK) library wire models, which provide approximate interconnect characteristics based on technology parameters. This idealized approach enables early timing verification before physical implementation, but requires subsequent post-layout STA to validate timing with actual buffer insertion and extracted parasitic RC values from the final layout.
+
+**Clock Tree Synthesis Stage**
+
+When constructing a clock tree, three critical parameters must be addressed: (1) Clock skew minimization requires balanced clock tree structures that ensure equal wire lengths and matching delays to all endpoints, guaranteeing synchronous signal arrival. (2) Clock signal integrity demands careful slew rate control through specialized clock buffers that maintain symmetrical rise/fall times, compensating for RC degradation along interconnect routes. (3) Crosstalk prevention necessitates strategic shielding of clock nets, typically achieved by routing power (VDD) or ground lines adjacent to clock signals to break parasitic coupling capacitances with neighboring aggressor nets; this shielding methodology may also be applied to other timing-critical signal paths. Together, these techniques ensure robust clock distribution with minimal timing variation, proper signal quality, and reduced noise coupling throughout the clock network.
+
+<img width="676" height="471" alt="Screenshot 2025-07-30 224543" src="https://github.com/user-attachments/assets/20a87008-cf00-483c-8d3a-df4fbd00fb82" />
+
 ## Lab 4
 
 - Tracks.info used in routing stage (`/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd`)
