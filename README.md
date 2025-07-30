@@ -848,7 +848,33 @@ p-poly ↔ poly spacing
     <img width="848" height="905" alt="Screenshot 2025-07-28 225050" src="https://github.com/user-attachments/assets/8fd2aa54-a14f-4a08-9c63-2e0da79a209a" />
 
     values area has increased and worst negative slack has become 0
-   
+
+- run floorplan
+
+  <img width="1847" height="883" alt="Screenshot 2025-07-28 225444" src="https://github.com/user-attachments/assets/9c38515d-dcd4-43cb-93d8-db4e18e8d09e" />
+
+  we get error
+
+  <img width="1847" height="883" alt="Screenshot 2025-07-28 225444" src="https://github.com/user-attachments/assets/2e5e7292-a69f-4646-9e8a-3f35f27d626a" />
+
+  run these commands instead :
+
+  ```
+  init_floorplan
+  place_io
+  tap_decap_or
+  ```
+
+- run placement and we obtain `DEF` file
+  opening the file using magic by command --> 
+
+  
+  
+  
+
+  
+
+  
 
     
 
