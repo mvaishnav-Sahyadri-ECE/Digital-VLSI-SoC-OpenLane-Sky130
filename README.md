@@ -906,9 +906,12 @@ p-poly ↔ poly spacing
 
   <img width="1852" height="907" alt="Screenshot 2025-07-29 182340" src="https://github.com/user-attachments/assets/e4d7ed6d-9bc7-4d7a-975e-4a574397192c" />
 
-  <img width="1848" height="897" alt="Screenshot 2025-07-29 182747" src="https://github.com/user-attachments/assets/da3f2b6b-7b03-44f7-a389-79c09092daca" />
-
+  <img width="1518" height="655" alt="Screenshot 2025-07-30 222049" src="https://github.com/user-attachments/assets/3a085a95-c2b1-493c-8b05-0ca7bbe19744" />
+  
   echo $::env(CTS_CLK_BUFFER_LIST) [Checking current value of CTS_CLK_BUFFER_LIST]
+
+  <img width="1518" height="655" alt="Screenshot 2025-07-30 222049" src="https://github.com/user-attachments/assets/3a085a95-c2b1-493c-8b05-0ca7bbe19744" />
+
   running openROAD command again
   
   ```
@@ -944,7 +947,13 @@ p-poly ↔ poly spacing
   
   Checking clock skew for setup and hold
 
+
+  
+
   <img width="1848" height="892" alt="Screenshot 2025-07-29 183246" src="https://github.com/user-attachments/assets/f0f59fbe-4535-44af-98d4-a1181ec456a9" />
+
+  <img width="1337" height="740" alt="Screenshot 2025-07-30 220638" src="https://github.com/user-attachments/assets/f89677be-3220-45dc-8868-1bde680a25e1" />
+
   
   <img width="1852" height="945" alt="Screenshot 2025-07-29 183410" src="https://github.com/user-attachments/assets/5b3b741f-fc9e-40d4-9720-3ff3ae5cf279" />
 
