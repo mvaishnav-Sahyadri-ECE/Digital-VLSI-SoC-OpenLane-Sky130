@@ -909,10 +909,6 @@ p-poly ↔ poly spacing
   <img width="1848" height="897" alt="Screenshot 2025-07-29 182747" src="https://github.com/user-attachments/assets/da3f2b6b-7b03-44f7-a389-79c09092daca" />
 
   echo $::env(CTS_CLK_BUFFER_LIST) [Checking current value of CTS_CLK_BUFFER_LIST]
-
-  <img width="1848" height="897" alt="Screenshot 2025-07-29 182747" src="https://github.com/user-attachments/assets/8c02591b-4859-4cfc-ae73-7684b90d0d1f" />
-
-
   running openROAD command again
   
   ```
