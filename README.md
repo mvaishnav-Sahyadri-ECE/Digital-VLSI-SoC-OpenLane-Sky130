@@ -949,14 +949,9 @@ p-poly ↔ poly spacing
 
   <img width="1848" height="892" alt="Screenshot 2025-07-29 183246" src="https://github.com/user-attachments/assets/f0f59fbe-4535-44af-98d4-a1181ec456a9" />
 
-  Checking clock skew for setup and hold, and adding back the `sky130_fd_sc_hd__clkbuf_1`
-  `echo $::env(CTS_CLK_BUFFER_LIST) [Checking current value of CTS_CLK_BUFFER_LIST]`
-
-  `set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_sc_hd__clkbuf_1]`
-
-  `echo $::env(CTS_CLK_BUFFER_LIST)`
-
-
+ 
+  Checking clock skew for setup and hold
+  
   <img width="1852" height="945" alt="Screenshot 2025-07-29 183410" src="https://github.com/user-attachments/assets/5b3b741f-fc9e-40d4-9720-3ff3ae5cf279" />
 
 
