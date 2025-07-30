@@ -901,7 +901,7 @@ p-poly ↔ poly spacing
 
   <img width="1830" height="878" alt="Screenshot 2025-07-29 181916" src="https://github.com/user-attachments/assets/1e754cbe-4c97-479c-bcce-e9beb3ce3154" />
 
-  removing 'sky130_fd_sc_hd__clkbuf_1
+  removing 'sky130_fd_sc_hd__clkbuf_1 and running CTS again 
 
   <img width="1852" height="907" alt="Screenshot 2025-07-29 182340" src="https://github.com/user-attachments/assets/e4d7ed6d-9bc7-4d7a-975e-4a574397192c" />
 
@@ -909,7 +909,56 @@ p-poly ↔ poly spacing
 
   <img width="1848" height="897" alt="Screenshot 2025-07-29 182747" src="https://github.com/user-attachments/assets/da3f2b6b-7b03-44f7-a389-79c09092daca" />
 
+  echo $::env(CTS_CLK_BUFFER_LIST) [Checking current value of CTS_CLK_BUFFER_LIST]
+
+  <img width="1848" height="897" alt="Screenshot 2025-07-29 182747" src="https://github.com/user-attachments/assets/8c02591b-4859-4cfc-ae73-7684b90d0d1f" />
+
+
+  running openROAD command again
   
+  ```
+  openroad
+
+  read_lef /openLANE_flow/designs/picorv32a/runs/<date>/tmp/merged.lef
+
+  read_def /openLANE_flow/designs/picorv32a/runs/<date>/results/cts/picorv32a.cts.def
+
+  write_db pico_cts1.db
+
+  Loading the created database in OpenROAD
+  read_db pico_cts.db
+
+  read_verilog /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+
+  read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+  link_design picorv32a
+
+  read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+  set_propagated_clock [all_clocks]
+
+  report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+  report_clock_skew -hold
+
+  report_clock_skew -setup
+  ```
+  
+  <img width="1848" height="916" alt="Screenshot 2025-07-29 183123" src="https://github.com/user-attachments/assets/d270f744-9aec-439a-b537-3e5fb5a04a9a" />
+
+  <img width="1848" height="892" alt="Screenshot 2025-07-29 183246" src="https://github.com/user-attachments/assets/f0f59fbe-4535-44af-98d4-a1181ec456a9" />
+
+  
+  `echo $::env(CTS_CLK_BUFFER_LIST) [Checking current value of CTS_CLK_BUFFER_LIST]`
+
+  `set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_sc_hd__clkbuf_1]`
+
+  `echo $::env(CTS_CLK_BUFFER_LIST)`
+
+
+  <img width="1852" height="945" alt="Screenshot 2025-07-29 183410" src="https://github.com/user-attachments/assets/5b3b741f-fc9e-40d4-9720-3ff3ae5cf279" />
+
 
 
 
