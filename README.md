@@ -743,7 +743,7 @@ p-poly ↔ poly spacing
 # DAY 4 
 # Pre-layout Timing Analysis and Importance of Good Clock Tree 
 
-## Lab 
+## Lab 4
 
 - Tracks.info used in routing stage (`/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd`)
 
@@ -928,7 +928,7 @@ p-poly ↔ poly spacing
   Loading the created database in OpenROAD
   read_db pico_cts.db
 
-  read_verilog /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+  read_verilog /openLANE_flow/designs/picorv32a/runs/<date>/results/synthesis/picorv32a.synthesis_cts.v
 
   read_liberty $::env(LIB_SYNTH_COMPLETE)
 
@@ -952,6 +952,54 @@ p-poly ↔ poly spacing
   <img width="1848" height="892" alt="Screenshot 2025-07-29 183246" src="https://github.com/user-attachments/assets/f0f59fbe-4535-44af-98d4-a1181ec456a9" />
   
   <img width="1852" height="945" alt="Screenshot 2025-07-29 183410" src="https://github.com/user-attachments/assets/5b3b741f-fc9e-40d4-9720-3ff3ae5cf279" />
+
+
+
+# DAY 5 
+# Final steps for RTL2GDS using tritonRoute and openSTA
+
+## Lab 5 
+
+- Performing (PDN) Power Distribution Network
+
+  - In docker open openlane andd perform prepare the design and include newly added `lef` to openlane flow.
+  - set SYNTH_STRATEGY --> DELAY 3
+  - set SYNTH_SIZING --> 1
+  - run synthesis, floorplan, placement and finally cts
+  - after cts is done we do power distribution network PDN
+  - gen_pdn
+
+  <img width="1845" height="898" alt="Screenshot 2025-07-29 183947" src="https://github.com/user-attachments/assets/0623ac22-6ec7-4ea5-9456-c67c1de65eab" />
+
+  <img width="1852" height="906" alt="Screenshot 2025-07-29 184133" src="https://github.com/user-attachments/assets/944c3ba9-5daf-4bd0-8a20-96b47da0d1c6" />
+
+  <img width="1810" height="887" alt="Screenshot 2025-07-29 184343" src="https://github.com/user-attachments/assets/23dc0a50-d4e4-4b89-8e1e-8fab538c8f30" />
+
+  <img width="1847" height="902" alt="Screenshot 2025-07-29 184540" src="https://github.com/user-attachments/assets/f948ace1-3fe0-488a-9a35-a88aca1b8b36" />
+
+  <img width="1856" height="898" alt="Screenshot 2025-07-29 184602" src="https://github.com/user-attachments/assets/4d1d219b-4dc2-4011-9633-dfe76a9c24be" />
+
+  - In `<date>/tmp/floorplan/` directory we  have the pdn
+    to open we use command : `magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef      def read 14-pdn.def &`
+
+  <img width="1606" height="818" alt="Screenshot 2025-07-29 184757" src="https://github.com/user-attachments/assets/d80cc966-ecb3-4adc-a923-1d4fe65a3cc7" />
+
+  <img width="1502" height="838" alt="Screenshot 2025-07-29 184832" src="https://github.com/user-attachments/assets/8979c7cf-74b0-4249-b8ba-4a8595d78207" />
+
+  <img width="1506" height="837" alt="Screenshot 2025-07-29 184913" src="https://github.com/user-attachments/assets/9ecab539-9937-4f37-92ee-a3ead193d6ac" />
+
+- Perfrom detailed routing using TritonRoute
+
+  - run routing using command --> `run_routing`
+ 
+    <img width="1852" height="903" alt="Screenshot 2025-07-29 185022" src="https://github.com/user-attachments/assets/1c33b709-93b7-4a08-81d0-c7b58e537e81" />
+
+
+
+
+
+    
+
 
 
 
