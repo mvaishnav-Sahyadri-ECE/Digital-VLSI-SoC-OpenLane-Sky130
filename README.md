@@ -889,12 +889,6 @@ p-poly ↔ poly spacing
 
   <img width="1847" height="272" alt="Screenshot 2025-07-29 181247" src="https://github.com/user-attachments/assets/7573ef66-934f-45e7-8193-366e2c699ff4" />
   
-  - Pre-CTS Timing Analysis
-
-  <img width="1003" height="661" alt="after cts1" src="https://github.com/user-attachments/assets/91db4919-d303-42a5-a276-377588a67af0" />
-
-  
-  <img width="1425" height="677" alt="after cts 2" src="https://github.com/user-attachments/assets/baa3a503-6da3-4d0e-9f4f-97a298cf4b80" />
 
 - Post-CTS Timing analysis : OpenROAD
 
