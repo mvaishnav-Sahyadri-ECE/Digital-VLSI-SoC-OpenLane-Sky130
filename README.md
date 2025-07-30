@@ -771,6 +771,8 @@ p-poly ↔ poly spacing
     then type `lef write` in tkcon window. This will create files as shown below.
     
     <img width="848" height="146" alt="Screenshot 2025-07-27 015605" src="https://github.com/user-attachments/assets/ae0c769f-27b8-4342-84ce-398afc2b430d" />
+    <img width="848" height="145" alt="Screenshot 2025-07-30 130455" src="https://github.com/user-attachments/assets/a75274fc-1505-4900-a4a6-2f0cd839281c" />
+    
 
 - Pluging-in Custom Inverter Cell into Openlane
 
