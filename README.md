@@ -27,7 +27,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Placement](#Place-Ment)
     - [Characterization](#Library-Characterization)
     - [Estimation of area of the die](#Estimation-of-area-of-the-die)
-- [Day 3](#Day-3)
+- [Day 3](#DAY-3)
   - [Theory](#DAY-3)
     - [Designing a Library Cell](#Designing-a-Library-Cell)
     - [steps for simulation in ngspice](#Follow-these-steps-for-simulation-in-ngspice)
@@ -38,11 +38,11 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Post-Layout Spice simulation (ngspice)](#Post-Layout-Spice-simulation-(ngspice))
     - [Slew rate and Propagation delay](#Slew-rate-and-Propagation-delay)
     - [Fix Tech File DRC via Magic](#Fix-Tech-File-DRC-via-Magic)
-- [Placement](#placement)
-- [Cell Design Flow](#cell-design-flow)
-  - [SPICE Deck Creation](#spice-deck-creation)
-  - [Simulation in ngspice](#simulation-in-ngspce)
-  - [VTC](#vtc)
+- [DAY 4](#DAY-4)
+  - [Theory](#DAY-4)
+    - [Delay Table](#Delay-Table)
+    - [Timing Analysis (using Ideal Clocks)](#Timing-Analysis-(using-Ideal-Clocks))
+    - [Clock Tree Synthesis Stage](#Clock-Tree-Synthesis-Stage)
   - [VTC with 2.5× PMOS Width](#vtc-with-25-x-w-25-times-channel-width-of-pmos)
   - [Transient Simulation](#transient-simulation)
 - [Custom Design of SKY130 Standard Cell](#custom-design-of-sky130-standard-cell)
@@ -745,7 +745,7 @@ p-poly ↔ poly spacing
 
 ## Theory
 
-**Delay Table**
+#### Delay Table
 
 To minimize clock skew between endpoints of a clock tree (preventing signal arrival at different times):
 
@@ -757,11 +757,11 @@ To minimize clock skew in a clock tree distribution network, buffers at the same
 
 <img width="1166" height="635" alt="Screenshot 2025-07-30 223725" src="https://github.com/user-attachments/assets/15e6a690-8f95-41c5-8027-a0e04d836538" />
 
-**Timing Analysis (using Ideal Clocks)**
+#### Timing Analysis (using Ideal Clocks)
 
 During pre-layout static timing analysis (STA), the verification is performed using ideal clock models that do not yet account for the physical implementation effects. At this stage, the analysis excludes both clock buffer delays and net delays caused by RC parasitics, as the complete routing information is not yet available. Instead, wire delay estimates are derived from the process design kit (PDK) library wire models, which provide approximate interconnect characteristics based on technology parameters. This idealized approach enables early timing verification before physical implementation, but requires subsequent post-layout STA to validate timing with actual buffer insertion and extracted parasitic RC values from the final layout.
 
-**Clock Tree Synthesis Stage**
+#### Clock Tree Synthesis Stage
 
 When constructing a clock tree, three critical parameters must be addressed: (1) Clock skew minimization requires balanced clock tree structures that ensure equal wire lengths and matching delays to all endpoints, guaranteeing synchronous signal arrival. (2) Clock signal integrity demands careful slew rate control through specialized clock buffers that maintain symmetrical rise/fall times, compensating for RC degradation along interconnect routes. (3) Crosstalk prevention necessitates strategic shielding of clock nets, typically achieved by routing power (VDD) or ground lines adjacent to clock signals to break parasitic coupling capacitances with neighboring aggressor nets; this shielding methodology may also be applied to other timing-critical signal paths. Together, these techniques ensure robust clock distribution with minimal timing variation, proper signal quality, and reduced noise coupling throughout the clock network.
 
