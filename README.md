@@ -750,6 +750,9 @@ p-poly ↔ poly spacing
 
   <img width="848" height="490" alt="Screenshot 2025-07-30 000549" src="https://github.com/user-attachments/assets/bbf1a286-b4cd-44bf-a572-249b2c87fe0e" />
 
+  <img width="848" height="417" alt="Screenshot 2025-07-30 113158" src="https://github.com/user-attachments/assets/b6e985f8-a29b-477c-806a-c1da7bda2ab1" />
+
+  
 - Type the Command in tkcon window to set grid as tracks of locali layer
    ```grid 0.46um 0.34um 0.23um 0.17um```
 
@@ -772,7 +775,9 @@ p-poly ↔ poly spacing
 
   - Copy the LEF file `sky130_vsdinv.lef` and `sky130_fd_sc_hd__*` from `openlane/vsdstdcelldesign/libs` to `picorv32a/src` directory.
  
-    <img width="1732" height="292" alt="Screenshot 2025-07-27 112459" src="https://github.com/user-attachments/assets/cd356fb9-25aa-4665-b87b-1e17dc3b5659" />
+    <img width="848" height="292" alt="Screenshot 2025-07-27 112459" src="https://github.com/user-attachments/assets/cd356fb9-25aa-4665-b87b-1e17dc3b5659" />
+
+    <img width="848" height="267" alt="Screenshot 2025-07-30 113419" src="https://github.com/user-attachments/assets/5022ddbe-00f2-4f35-babc-350cc474992e" />
 
  
   - add these commands into `config.tcl` in `Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a`
