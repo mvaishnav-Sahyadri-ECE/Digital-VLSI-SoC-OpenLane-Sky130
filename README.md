@@ -802,7 +802,8 @@ p-poly ↔ poly spacing
 
   - setting lefs
 
-    <img width="848" height="906" alt="Screenshot 2025-07-30 114507" src="https://github.com/user-attachments/assets/2f8a29cb-3e5e-4009-a2ae-150f1d243454" />
+    <img width="1697" height="892" alt="Screenshot 2025-07-30 132028" src="https://github.com/user-attachments/assets/647d1896-6a85-48f4-92e6-a4985aa4c76c" />
+
  
     ```
     set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
