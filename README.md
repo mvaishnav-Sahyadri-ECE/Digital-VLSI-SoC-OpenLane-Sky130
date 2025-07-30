@@ -906,8 +906,6 @@ p-poly ↔ poly spacing
 
   <img width="1852" height="907" alt="Screenshot 2025-07-29 182340" src="https://github.com/user-attachments/assets/e4d7ed6d-9bc7-4d7a-975e-4a574397192c" />
 
-  <img width="1848" height="920" alt="Screenshot 2025-07-29 182705" src="https://github.com/user-attachments/assets/244d04ab-f94d-4d70-90d9-1b002916ebdb" />
-
   <img width="1848" height="897" alt="Screenshot 2025-07-29 182747" src="https://github.com/user-attachments/assets/da3f2b6b-7b03-44f7-a389-79c09092daca" />
 
   echo $::env(CTS_CLK_BUFFER_LIST) [Checking current value of CTS_CLK_BUFFER_LIST]
