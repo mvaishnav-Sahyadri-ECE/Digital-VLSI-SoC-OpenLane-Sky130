@@ -1043,12 +1043,16 @@ p-poly ↔ poly spacing
 <img width="1055" height="857" alt="Screenshot 2025-07-29 224044" src="https://github.com/user-attachments/assets/ace98a9a-4742-4409-8a97-660841e75a81" />
 
 **GDS**
-Stands for Graphic Design Standard. This is the file that is sent to the foundry and is called "tape-out"GDS Stands for Graphic Design Standard. This is the file that is sent to the foundry and is called "tape-out".
+Stands for Graphic Design System. This is the file that is sent to the foundry and is called "tape-out".
 
 In openLane use the command run_magic
 
 The GDSII file is generated in the `results/magic` directory
 
+
+**[DEF](https://teamvlsi.com/2020/08/def-file-in-vlsi-design-exchange.html)**
+
+**[GDSII](https://en.wikipedia.org/wiki/GDSII)**
 
 
 
