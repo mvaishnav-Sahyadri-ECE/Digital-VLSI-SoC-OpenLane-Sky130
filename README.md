@@ -423,7 +423,9 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
 - In ```runs/<date>/results/floorplan/picorv32a.floorplan.def``` which is a design exchange format, containing the die area and positions.
   
   <img width="848" height="107" alt="Screenshot 2025-07-24 132349" src="https://github.com/user-attachments/assets/472471ea-1a17-4a3b-8d65-77c46b1f1ffb" />
-  
+
+  <img width="848" height="134" alt="Screenshot 2025-07-30 112731" src="https://github.com/user-attachments/assets/163de2e6-97e6-49ba-b443-9d122c5f390d" />
+
 
   ```
   DESIGN picorv32a ;
