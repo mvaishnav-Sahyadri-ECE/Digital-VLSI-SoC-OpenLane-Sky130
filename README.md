@@ -44,8 +44,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Timing Analysis (using Ideal Clocks)](#Timing-Analysis-(using-Ideal-Clocks))
     - [Clock Tree Synthesis Stage](#Clock-Tree-Synthesis-Stage)
   - [Lab](#Lab-4)
-  - [Transient Simulation](#transient-simulation)
-- [Custom Design of SKY130 Standard Cell](#custom-design-of-sky130-standard-cell)
+- [DAY 5](#DAY-5)
   - [SPICE Characterization](#spice-characterisation)
   - [LEF Extraction](#lef-extraction)
 - [Integration with OpenLANE](#synthesis-floorplanning-with-custom-standard-cell)
@@ -765,7 +764,8 @@ During pre-layout static timing analysis (STA), the verification is performed us
 
 When constructing a clock tree, three critical parameters must be addressed: (1) Clock skew minimization requires balanced clock tree structures that ensure equal wire lengths and matching delays to all endpoints, guaranteeing synchronous signal arrival. (2) Clock signal integrity demands careful slew rate control through specialized clock buffers that maintain symmetrical rise/fall times, compensating for RC degradation along interconnect routes. (3) Crosstalk prevention necessitates strategic shielding of clock nets, typically achieved by routing power (VDD) or ground lines adjacent to clock signals to break parasitic coupling capacitances with neighboring aggressor nets; this shielding methodology may also be applied to other timing-critical signal paths. Together, these techniques ensure robust clock distribution with minimal timing variation, proper signal quality, and reduced noise coupling throughout the clock network.
 
-<img width="676" height="471" alt="Screenshot 2025-07-30 224543" src="https://github.com/user-attachments/assets/20a87008-cf00-483c-8d3a-df4fbd00fb82" />
+<img width="676" height="457" alt="Screenshot 2025-07-30 224543" src="https://github.com/user-attachments/assets/765ab7fb-20ea-40a2-a724-032cb203e7ad" />
+
 
 ## Lab 4
 
