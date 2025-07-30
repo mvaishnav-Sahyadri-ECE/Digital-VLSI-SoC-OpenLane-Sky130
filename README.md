@@ -43,7 +43,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Delay Table](#Delay-Table)
     - [Timing Analysis (using Ideal Clocks)](#Timing-Analysis-(using-Ideal-Clocks))
     - [Clock Tree Synthesis Stage](#Clock-Tree-Synthesis-Stage)
-  - [VTC with 2.5× PMOS Width](#vtc-with-25-x-w-25-times-channel-width-of-pmos)
+  - [Lab](#Lab-4)
   - [Transient Simulation](#transient-simulation)
 - [Custom Design of SKY130 Standard Cell](#custom-design-of-sky130-standard-cell)
   - [SPICE Characterization](#spice-characterisation)
