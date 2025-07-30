@@ -424,8 +424,6 @@ In Order to fix negetive slack we change the clock period to ```55.00``` in ```s
   
   <img width="848" height="107" alt="Screenshot 2025-07-24 132349" src="https://github.com/user-attachments/assets/472471ea-1a17-4a3b-8d65-77c46b1f1ffb" />
 
-  <img width="848" height="134" alt="Screenshot 2025-07-30 112731" src="https://github.com/user-attachments/assets/163de2e6-97e6-49ba-b443-9d122c5f390d" />
-
 
   ```
   DESIGN picorv32a ;
@@ -634,6 +632,7 @@ Final Result :
 
 - Clone vsdstdcelldesign. Copy the techfile ```sky130A.tech``` from ```pdks/sky130A/libs.tech/magic/``` to directory of the cloned repo. 
   <img width="848" height="52" alt="Screenshot 2025-07-26 174607" src="https://github.com/user-attachments/assets/b185ee77-7baf-4d9d-a14e-8f3ce328d139" />
+  <img width="848" height="168" alt="Screenshot 2025-07-30 125827" src="https://github.com/user-attachments/assets/73cde73d-b8ce-40b6-b346-73d279bccbc6" />
 
 - View the mag file using magic ```magic -T sky130A.tech sky130_inv.mag &```
   <img width="848" height="57" alt="Screenshot 2025-07-26 174719" src="https://github.com/user-attachments/assets/144921cd-5e35-4c8b-9918-89460b008333" />
