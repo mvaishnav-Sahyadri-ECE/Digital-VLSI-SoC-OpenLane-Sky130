@@ -899,6 +899,20 @@ p-poly ↔ poly spacing
 
   <img width="1847" height="908" alt="Screenshot 2025-07-29 181832" src="https://github.com/user-attachments/assets/2f8ed163-c532-491e-906b-cad0c448fc34" />
 
+  <img width="1830" height="878" alt="Screenshot 2025-07-29 181916" src="https://github.com/user-attachments/assets/1e754cbe-4c97-479c-bcce-e9beb3ce3154" />
+
+  removing 'sky130_fd_sc_hd__clkbuf_1
+
+  <img width="1852" height="907" alt="Screenshot 2025-07-29 182340" src="https://github.com/user-attachments/assets/e4d7ed6d-9bc7-4d7a-975e-4a574397192c" />
+
+  <img width="1848" height="920" alt="Screenshot 2025-07-29 182705" src="https://github.com/user-attachments/assets/244d04ab-f94d-4d70-90d9-1b002916ebdb" />
+
+  <img width="1848" height="897" alt="Screenshot 2025-07-29 182747" src="https://github.com/user-attachments/assets/da3f2b6b-7b03-44f7-a389-79c09092daca" />
+
+  
+
+
+
 
   
   
