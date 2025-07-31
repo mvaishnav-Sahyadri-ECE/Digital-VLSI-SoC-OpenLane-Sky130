@@ -963,8 +963,9 @@ When constructing a clock tree, three critical parameters must be addressed: (1)
   - iterative process
 
 - Run CTS
-
-  run synthesis,floorplan,placement and then run cts (`run_cts`)
+  
+  - Here we proceed with earlier 0 violation design. we want to proceed with the clean design to further stage.
+  - run synthesis,floorplan,placement and then run cts (`run_cts`)
 
   <img width="1297" height="457" alt="Screenshot 2025-07-29 181220" src="https://github.com/user-attachments/assets/1cb63874-68e5-4fba-a84f-a27dcec9eb0b" />
 
