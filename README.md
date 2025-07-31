@@ -770,7 +770,7 @@ When constructing a clock tree, three critical parameters must be addressed: (1)
 
   <img width="848" height="490" alt="Screenshot 2025-07-30 000549" src="https://github.com/user-attachments/assets/bbf1a286-b4cd-44bf-a572-249b2c87fe0e" />
 
-  <img width="848" height="417" alt="Screenshot 2025-07-30 113158" src="https://github.com/user-attachments/assets/b6e985f8-a29b-477c-806a-c1da7bda2ab1" />
+  <img width="848" height="800" alt="Screenshot 2025-07-30 113158" src="https://github.com/user-attachments/assets/b6e985f8-a29b-477c-806a-c1da7bda2ab1" />
 
   
 - Type the Command in tkcon window to set grid as tracks of locali layer
