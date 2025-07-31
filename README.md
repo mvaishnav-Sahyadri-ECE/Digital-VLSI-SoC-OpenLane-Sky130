@@ -898,7 +898,68 @@ When constructing a clock tree, three critical parameters must be addressed: (1)
 
   <img width="1505" height="782" alt="Screenshot 2025-07-29 010553" src="https://github.com/user-attachments/assets/9461a51c-4038-4e8f-ad4a-088adf6a8967" />
 
+- Post-Synthesis timing analysis
 
+  Since we are having improved timing of 0 wn. so what we will do is we will do timing analysis on Synthesis that has lot of violations
+  - we gradually improve and reduce our slack by replacing cells with better one and to deliver improved delay.
+  This is **timing ECO fixes**
+
+  First we do is running the synthesis --> include newly added lef to openlane flow --> set ::env(SYNTH_SIZING) 1 --> set                ::env(SYNTH_MAX_FANOUT) 4 --> run_synthesis
+
+  <img width="1848" height="902" alt="Screenshot 2025-07-31 191742" src="https://github.com/user-attachments/assets/3d42043d-4758-4577-ae4b-c14846e44257" />
+  
+
+  Later in `cd Desktop/work/tools/openlane_working_dir/openlane` we write command `sta pre_sta.conf`
+
+  *sta pre_sta.conf*
+  <img width="1838" height="901" alt="Screenshot 2025-07-31 211105" src="https://github.com/user-attachments/assets/ee021675-c15d-46ad-b587-43b0a22ccf3f" />
+
+  *my_base.sdc*
+  <img width="1832" height="891" alt="Screenshot 2025-07-31 211155" src="https://github.com/user-attachments/assets/2c6e2506-2d8f-4049-ad3a-d95f4fafeec8" />
+
+  <img width="1433" height="756" alt="Screenshot 2025-07-31 191954" src="https://github.com/user-attachments/assets/0893743c-bb30-450a-9620-e1d8b62fa90b" />
+
+  <img width="1817" height="908" alt="Screenshot 2025-07-31 192011" src="https://github.com/user-attachments/assets/b17625a1-252e-4413-befd-2b22a3379632" />
+
+  Replacing some cells to reduce slack
+
+  <img width="1855" height="437" alt="Screenshot 2025-07-31 202908" src="https://github.com/user-attachments/assets/73c52399-6aae-4cce-bd09-1e93e5eadfda" />
+
+  report_net -connections _11672_ [we see the driver pins] 
+  <img width="1857" height="910" alt="Screenshot 2025-07-31 203237" src="https://github.com/user-attachments/assets/5f8240b5-57a3-4f99-84f6-3ab736b991f4" />
+
+  replace_cell _14510_ sky130_fd_sc_hd__or3_4 [we replace some cells with better suited ones for driving 4 fanouts]
+  <img width="1847" height="921" alt="Screenshot 2025-07-31 203516" src="https://github.com/user-attachments/assets/affa5a5a-3594-4d79-9f75-0cf3bf84f6e7" />
+
+  To check the report and see the changes in slack we use command : report_checks -fields {net cap slew input_pins} -digits 4
+
+  Slack reduced
+
+  <img width="1841" height="905" alt="Screenshot 2025-07-31 203603" src="https://github.com/user-attachments/assets/38e44c1a-927a-47ec-8eec-e10d63772ddc" />
+
+  report_checks -from _29052_ -to _30440_ -through _14510_
+  <img width="1842" height="912" alt="Screenshot 2025-07-31 204342" src="https://github.com/user-attachments/assets/747b907d-20f5-44fa-9665-31cadfd64629" />
+
+  <img width="1852" height="916" alt="Screenshot 2025-07-31 204533" src="https://github.com/user-attachments/assets/5e3f3cc8-b68e-4948-909c-57ace47adec3" />
+
+  report_net -connections _11668_
+  
+  replace_cell _14506_ sky130_fd_sc_hd__or4_4
+
+  <img width="1855" height="645" alt="Screenshot 2025-07-31 205421" src="https://github.com/user-attachments/assets/bb689f1d-315f-476a-8b97-14916f3b0c5e" />
+
+  Slack Reduced
+
+  <img width="1853" height="880" alt="Screenshot 2025-07-31 205436" src="https://github.com/user-attachments/assets/6610dbe3-72fb-4f44-ac34-efcfef1c67b7" />
+
+  Intially : -23.90
+  now : -22.9860
+
+  <img width="397" height="667" alt="Screenshot 2025-07-31 212541" src="https://github.com/user-attachments/assets/e52a36e4-8a81-4ed7-bdac-31ecddd4e35e" />
+
+  - We have reduced around 0.914 ns of violation
+ 
+  - iterative process
 
 - Run CTS
 
