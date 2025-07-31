@@ -18,6 +18,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Synthesis](#Lab-1)
     - [Estimation of Flip Flop Ratio](#Estimation-of-Flip-Flop-Ratio)
     - [Slack](#Slack)
+      
 - [DAY 2](#Day-2)
   - [Theory](#DAY-2)
     - [Floorplan](#Floorplan)
@@ -27,6 +28,7 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Placement](#Place-Ment)
     - [Characterization](#Library-Characterization)
     - [Estimation of area of the die](#Estimation-of-area-of-the-die)
+      
 - [Day 3](#DAY-3)
   - [Theory](#DAY-3)
     - [Designing a Library Cell](#Designing-a-Library-Cell)
@@ -38,24 +40,17 @@ OpenLANE is a powerful, open-source RTL-to-GDSII automation framework that integ
     - [Post-Layout Spice simulation (ngspice)](#Post-Layout-Spice-simulation-(ngspice))
     - [Slew rate and Propagation delay](#Slew-rate-and-Propagation-delay)
     - [Fix Tech File DRC via Magic](#Fix-Tech-File-DRC-via-Magic)
+      
 - [DAY 4](#DAY-4)
   - [Theory](#DAY-4)
     - [Delay Table](#Delay-Table)
     - [Timing Analysis (using Ideal Clocks)](#Timing-Analysis-(using-Ideal-Clocks))
     - [Clock Tree Synthesis Stage](#Clock-Tree-Synthesis-Stage)
   - [Lab](#Lab-4)
+    
 - [DAY 5](#DAY-5)
-  - [SPICE Characterization](#spice-characterisation)
-  - [LEF Extraction](#lef-extraction)
-- [Integration with OpenLANE](#synthesis-floorplanning-with-custom-standard-cell)
-- [Static Timing Analysis](#static-timing-analysis)
-  - [Pre-CTS Timing Analysis in OpenROAD](#pre-cts-timing-analysis-in-openroad)
-- [CTS](#cts)
-- [PDN](#pdn)
-- [Routing](#routing)
-- [GDSII](#gdsii)
-- [Acknowledgements](#acknowledgements)
-- [References](#references)
+  - [Lab](#Lab-5)
+  
 
 
 # DAY-1
