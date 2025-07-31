@@ -1138,6 +1138,7 @@ The GDSII file is generated in the `results/magic` directory
 # Acknowledgements
 
 [Kunal Ghosh](https://github.com/kunalg123) – Founder, VLSI System Design Corp.
+
 [Nickson Jose](https://github.com/nickson-jose)– Developer & Contributor, Open Source Physical Design
 
 
