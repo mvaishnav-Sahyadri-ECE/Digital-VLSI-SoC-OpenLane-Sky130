@@ -797,9 +797,9 @@ When constructing a clock tree, three critical parameters must be addressed: (1)
 
   - Copy the LEF file `sky130_vsdinv.lef` and `sky130_fd_sc_hd__*` from `openlane/vsdstdcelldesign/libs` to `picorv32a/src` directory.
  
-    <img width="848" height="292" alt="Screenshot 2025-07-27 112459" src="https://github.com/user-attachments/assets/cd356fb9-25aa-4665-b87b-1e17dc3b5659" />
+    <img width="848" height="400" alt="Screenshot 2025-07-27 112459" src="https://github.com/user-attachments/assets/cd356fb9-25aa-4665-b87b-1e17dc3b5659" />
 
-    <img width="848" height="267" alt="Screenshot 2025-07-30 113419" src="https://github.com/user-attachments/assets/5022ddbe-00f2-4f35-babc-350cc474992e" />
+    <img width="848" height="400" alt="Screenshot 2025-07-30 113419" src="https://github.com/user-attachments/assets/5022ddbe-00f2-4f35-babc-350cc474992e" />
 
  
   - add these commands into `config.tcl` in `Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a`
@@ -812,16 +812,16 @@ When constructing a clock tree, three critical parameters must be addressed: (1)
     set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
     ```
     
-    <img width="848" height="582" alt="Screenshot 2025-07-30 004441" src="https://github.com/user-attachments/assets/db94ac64-9f76-400c-83bc-161d92eb155d" />
+    <img width="848" height="800" alt="Screenshot 2025-07-30 004441" src="https://github.com/user-attachments/assets/db94ac64-9f76-400c-83bc-161d92eb155d" />
 
   - Run docker and prepare the design picorv32a. You may make use of overwrite command : `prep -design picorv32a -tag <date> -overwrite`
  
-    <img width="848" height="902" alt="Screenshot 2025-07-30 131638" src="https://github.com/user-attachments/assets/516d4ac8-968c-4285-9784-cfb003c45fed" />
+    <img width="848" height="1200" alt="Screenshot 2025-07-30 131638" src="https://github.com/user-attachments/assets/516d4ac8-968c-4285-9784-cfb003c45fed" />
 
 
   - setting lefs
 
-    <img width="1697" height="892" alt="Screenshot 2025-07-30 132028" src="https://github.com/user-attachments/assets/647d1896-6a85-48f4-92e6-a4985aa4c76c" />
+    <img width="1697" height="1200" alt="Screenshot 2025-07-30 132028" src="https://github.com/user-attachments/assets/647d1896-6a85-48f4-92e6-a4985aa4c76c" />
 
  
     ```
@@ -835,7 +835,7 @@ When constructing a clock tree, three critical parameters must be addressed: (1)
  
     <img width="848" height="387" alt="Screenshot 2025-07-30 115338" src="https://github.com/user-attachments/assets/7a3485fb-6d89-40cc-84f6-17800e613640" />
  
-    <img width="848" height="897" alt="Screenshot 2025-07-28 222817" src="https://github.com/user-attachments/assets/84f09731-1370-4d3c-b9c8-409273ba04f7" />
+    <img width="848" height="1200" alt="Screenshot 2025-07-28 222817" src="https://github.com/user-attachments/assets/84f09731-1370-4d3c-b9c8-409273ba04f7" />
  
     we get to see --> chip area, wns (worst timing violation) and tns (total negative slack)
 
