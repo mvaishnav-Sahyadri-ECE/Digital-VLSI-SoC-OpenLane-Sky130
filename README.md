@@ -1141,6 +1141,12 @@ The GDSII file is generated in the `results/magic` directory
 
 [Nickson Jose](https://github.com/nickson-jose)– Developer & Contributor, Open Source Physical Design
 
+# certificate of completion
+
+<img width="1045" height="738" alt="Screenshot 2025-08-10 182032" src="https://github.com/user-attachments/assets/20bf42d0-22ec-4421-82aa-e0265a209d10" />
+
+
+
 
      
 
